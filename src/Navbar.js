@@ -16,31 +16,31 @@ class Navbar extends React.Component {
 
         <NavLink
           class='link item'
-          to='/about'
+          to='/'
           exact
           >About Us</NavLink>
 
         <NavLink
           class='link item'
-          to='/faq'
+          to='/'
           exact
           >FAQ</NavLink>
 
         <NavLink
           class='link item'
-          to='/blog'
+          to='/'
           exact
           >Blog</NavLink>
 
         <NavLink
           class='link item'
-          to='/gift-cards'
+          to='/'
           exact
           >Gift Cards</NavLink>
 
         <NavLink
           class='link item'
-          to='/contact-us'
+          to='/'
           exact
           >Contact Us</NavLink>
     
