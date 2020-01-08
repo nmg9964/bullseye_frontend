@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, Checkbox, Form } from 'semantic-ui-react'
+import { Button, Form } from 'semantic-ui-react'
+import { connect } from 'react-redux'
 
 class Login extends React.Component {
   render() {
