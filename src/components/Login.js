@@ -3,6 +3,12 @@ import { Button, Form } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 
 class Login extends React.Component {
+  state = {
+    username: '',
+    password: '',
+    events: []
+  }
+  
   render() {
     return(
       <div className='login-form'>
@@ -10,7 +16,7 @@ class Login extends React.Component {
         <Form>
           <Form.Field>
             <label>Username</label>
-            <input type='text' name='username' placeholder='First Name'/>
+            <input type='text' name='username' placeholder='Username'/>
           </Form.Field>
 
           <Form.Field>
