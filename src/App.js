@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Navbar from './Navbar'
 import Home from './components/Home'
 import Login from './components/Login'
+import './App.css'
 import 'semantic-ui-css/semantic.min.css'
 
 function App() {
