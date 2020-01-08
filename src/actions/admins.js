@@ -1,11 +1,10 @@
 export const loginAdmin = admin => {
   return {
-    type: 'LOG_IN',
+    type: 'LOGIN',
     adminData: {
       id: admin.id,
       username: admin.username,
-      password: admin.password,
-      events: admin.events
+      password: admin.password
     }
   }
 }
