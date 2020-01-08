@@ -1,4 +1,4 @@
-export const loginAdmin = admin => {
+export const login = admin => {
   return {
     type: 'LOGIN',
     adminData: {
@@ -9,7 +9,7 @@ export const loginAdmin = admin => {
   }
 }
 
-export const logoutAdmin = () => {
+export const logout = () => {
   return {
     type: 'LOG_OUT'
   }
