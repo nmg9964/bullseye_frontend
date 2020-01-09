@@ -4,7 +4,8 @@ export const login = admin => {
     adminData: {
       id: admin.id,
       username: admin.username,
-      password: admin.password
+      password: admin.password,
+      events: admin.events
     }
   }
 }

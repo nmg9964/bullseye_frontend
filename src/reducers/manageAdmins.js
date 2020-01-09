@@ -1,5 +1,6 @@
-export default function manageEvents(state = {
+export default function manageAdmins(state = {
   currentAdmin: {},
+  events: []
 }, action) {
   switch(action.type) {
     case 'LOGIN':
@@ -8,7 +9,8 @@ export default function manageEvents(state = {
           id: action.adminData.id,
           username: action.adminData.username,
           password: action.adminData.password
-        }
+        },
+        events: action.adminData.events
       })
 
     default:

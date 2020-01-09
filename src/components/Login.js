@@ -6,7 +6,8 @@ import { login } from '../actions/admins'
 class Login extends React.Component {
   state = {
     username: '',
-    password: ''
+    password: '',
+    events: []
   }
 
   handleOnChange = event => {
@@ -35,8 +36,9 @@ class Login extends React.Component {
     .then(admin => {
       console.log(admin)
       this.props.login(admin)
+      this.props.history.push('/admin')
     })
-    this.setState({ username: '', password: '' })
+    this.setState({ username: '', password: '', events: [] })
   }
   
   render() {
