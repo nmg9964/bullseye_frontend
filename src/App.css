@@ -6,7 +6,10 @@
 }
 
 .App {
-  background-color: grey;
+  width: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 
 .App-logo {

@@ -27,14 +27,14 @@ class Login extends React.Component {
       },
       body: JSON.stringify({
         username: this.state.username,
-        password: this.state.password
+        password: this.state.password,
+        events: this.state.events
       })
     }
 
     fetch('http://localhost:3001/administrators', reqObj)
     .then(resp => resp.json())
     .then(admin => {
-      console.log(admin)
       this.props.login(admin)
       this.props.history.push('/admin')
     })
