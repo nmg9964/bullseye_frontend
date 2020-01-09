@@ -59,7 +59,7 @@ class Login extends React.Component {
           <Form.Field>
             <label>Password</label>
             <input 
-            text='text'
+            type='password'
             name='password'
             value={this.state.password} 
             placeholder='Password' 

@@ -13,7 +13,10 @@ class EventsList extends React.Component {
     return(
       <div>
 
-        {this.props.renderEventCard ? null :
+        {this.props.renderEventCard ?
+        <EventCard 
+          event={this.props.events.find(event => event.id === this.props.renderEventCard)}/> :
+
         <div className='App'>
           <Header as='h1'>
             Welcome, {this.props.currentAdmin.username}!
