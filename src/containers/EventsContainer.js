@@ -2,12 +2,17 @@ import React from 'react'
 import { connect } from 'react-redux'
 import EventsList from '../components/EventsList'
 import { logout } from '../actions/admins'
+import { showCard } from '../actions/events'
 
 class EventsContainer extends React.Component {
 
-  handleOnClick = () => {
+  handleLogoutClick = () => {
     this.props.logout()
     this.props.history.push('/login')
+  }
+
+  handleEventClick = event => {
+    this.props.showCard(event)
   }
 
   render () {
@@ -17,7 +22,9 @@ class EventsContainer extends React.Component {
         currentAdmin={this.props.currentAdmin}
         events={this.props.events}
         logout={this.props.logout}
-        handleOnClick={this.handleOnClick}/>
+        handleLogoutClick={this.handleLogoutClick}
+        handleEventClick={this.handleEventClick}
+        renderEventCard={this.props.renderEventCard}/>
       </div>
     )
   }
@@ -26,12 +33,14 @@ class EventsContainer extends React.Component {
 const mapStateToProps = state => {
   return { 
     currentAdmin: state.manageAdmins.currentAdmin,
-    events: state.manageAdmins.events
+    events: state.manageAdmins.events,
+    renderEventCard: state.manageEvents.renderEventCard
    }
 }
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout())
+  logout: () => dispatch(logout()),
+  showCard: event => dispatch(showCard(event))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(EventsContainer)

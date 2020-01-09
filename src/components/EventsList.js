@@ -11,29 +11,34 @@ class EventsList extends React.Component {
     const pastEvents = this.props.events.filter(event => new Date(event.date) < today)
 
     return(
-      <div className='App'>
-        <Header as='h1'>
-          Welcome, {this.props.currentAdmin.username}!
-        </Header><br></br>
+      <div>
 
-        <h2>Upcoming Events</h2>
-        <ul>
-          {upcomingEvents.map(event => {
-            return <li>{event.first_name}&nbsp;{event.last_name}</li>
-          })}
-        </ul><br></br>
+        {this.props.renderEventCard ? null :
+        <div className='App'>
+          <Header as='h1'>
+            Welcome, {this.props.currentAdmin.username}!
+          </Header><br></br>
 
-        <h2>Past Events</h2>
-        <ul>
-          {pastEvents.map(event => {
-            return <li>{event.first_name}&nbsp;{event.last_name}</li>
-          })}
-        </ul><br></br>
+          <h2>Upcoming Events</h2>
+          <ul>
+            {upcomingEvents.map(event => {
+              return <li onClick={() => this.props.handleEventClick(event)}>{event.first_name}&nbsp;{event.last_name}</li>
+            })}
+          </ul><br></br>
 
-        <Button primary onClick={this.props.handleOnClick}>
-          Logout
-        </Button>
-      </div>
+          <h2>Past Events</h2>
+          <ul>
+            {pastEvents.map(event => {
+              return <li onClick={() => this.props.handleEventClick(event)}>{event.first_name}&nbsp;{event.last_name}</li>
+            })}
+          </ul><br></br>
+
+          <Button primary onClick={this.props.handleLogoutClick}>
+            Logout
+          </Button>
+          </div>}
+
+        </div>
     )
   }
 }
