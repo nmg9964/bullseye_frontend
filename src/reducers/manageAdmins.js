@@ -13,6 +13,12 @@ export default function manageAdmins(state = {
         events: action.adminData.events
       })
 
+    case 'LOG_OUT':
+      return Object.assign({}, state, {
+        currentAdmin: {},
+        events: []
+      })
+
     default:
       return state
   }
