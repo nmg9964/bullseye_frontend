@@ -4,3 +4,7 @@ export const showCard = event => {
     id: event.id
   }
 }
+
+export const hideCard = () => {
+  return { type: 'HIDE_CARD' }
+}

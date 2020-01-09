@@ -7,6 +7,11 @@ export default function manageEvents(state = {
           renderEventCard: action.id
         })
 
+      case 'HIDE_CARD':
+        return Object.assign({}, state, {
+          renderEventCard: undefined
+        })
+
     default:
       return state
     }

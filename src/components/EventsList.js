@@ -5,6 +5,16 @@ import { withRouter } from 'react-router'
 import EventCard from './EventCard'
 
 class EventsList extends React.Component {
+
+  handleEventClick = event => {
+    this.props.showCard(event)
+  }
+
+  handleLogoutClick = () => {
+    this.props.logout()
+    this.props.history.push('/login')
+  }
+
   render () {
     const today = new Date()
     const upcomingEvents = this.props.events.filter(event => new Date(event.date) > today)
@@ -15,7 +25,8 @@ class EventsList extends React.Component {
 
         {this.props.renderEventCard ?
         <EventCard 
-          event={this.props.events.find(event => event.id === this.props.renderEventCard)}/> :
+          event={this.props.events.find(event => event.id === this.props.renderEventCard)}
+          hideCard={this.props.hideCard}/> :
 
         <div className='App'>
           <Header as='h1'>
@@ -25,18 +36,18 @@ class EventsList extends React.Component {
           <h2>Upcoming Events</h2>
           <ul>
             {upcomingEvents.map(event => {
-              return <li onClick={() => this.props.handleEventClick(event)}>{event.first_name}&nbsp;{event.last_name}</li>
+              return <li onClick={() => this.handleEventClick(event)}>{event.first_name}&nbsp;{event.last_name}</li>
             })}
           </ul><br></br>
 
           <h2>Past Events</h2>
           <ul>
             {pastEvents.map(event => {
-              return <li onClick={() => this.props.handleEventClick(event)}>{event.first_name}&nbsp;{event.last_name}</li>
+              return <li onClick={() => this.handleEventClick(event)}>{event.first_name}&nbsp;{event.last_name}</li>
             })}
           </ul><br></br>
 
-          <Button primary onClick={this.props.handleLogoutClick}>
+          <Button primary onClick={this.handleLogoutClick}>
             Logout
           </Button>
           </div>}
