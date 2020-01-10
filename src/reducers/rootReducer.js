@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import manageAdmins from './manageAdmins'
 import manageEvents from './manageEvents'
+import currentAdmin from './currentAdmin'
 
 export default combineReducers({
-  manageAdmins,
+  currentAdmin,
   manageEvents
 })

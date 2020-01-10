@@ -23,8 +23,8 @@ class EventsContainer extends React.Component {
 
 const mapStateToProps = state => {
   return { 
-    currentAdmin: state.manageAdmins.currentAdmin,
-    events: state.manageAdmins.events,
+    currentAdmin: state.currentAdmin,
+    events: state.manageEvents.events,
     renderEventCard: state.manageEvents.renderEventCard
    }
 }

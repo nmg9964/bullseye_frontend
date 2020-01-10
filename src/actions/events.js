@@ -8,3 +8,17 @@ export const showCard = event => {
 export const hideCard = () => {
   return { type: 'HIDE_CARD' }
 }
+
+export const updateEvent = event => {
+  return {
+    type: 'UPDATE_EVENT',
+    event
+  }
+}
+
+export const cancelEvent = event => {
+  return { 
+    type: 'CANCEL_EVENT',
+    id: event.id
+  }
+}

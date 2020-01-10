@@ -5,8 +5,8 @@ import { login } from '../actions/admins'
 
 class Login extends React.Component {
   state = {
-    username: '',
-    password: '',
+    username: 'navganj',
+    password: 'password',
     events: []
   }
 
