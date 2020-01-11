@@ -5,7 +5,6 @@ import { logout } from '../actions/admins'
 import { showCard, hideCard } from '../actions/events'
 
 class EventsContainer extends React.Component {
-
   render () {
     return(
       <div>

@@ -34,9 +34,10 @@ class Login extends React.Component {
       console.log(data)
       if (data.error) {
         alert('Invalid Credentials')
-      } else
+      } else {
         this.props.login(data)
         this.props.history.push('/admin')
+      }
     })
     this.setState({ username: '', password: '', events: [] })
   }
