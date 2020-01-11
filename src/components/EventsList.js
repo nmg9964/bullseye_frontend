@@ -16,10 +16,10 @@ class EventsList extends React.Component {
   }
 
   render () {
-    const today = new Date()
-    const currentTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
-    const upcomingEvents = this.props.events.filter(event => new Date(event.date) > today && event.time > currentTime)
-    const pastEvents = this.props.events.filter(event => new Date(event.date) < today || event.time < currentTime)
+    let today = new Date()
+    let currentTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
+    const upcomingEvents = this.props.events.filter(event => new Date(event.date) > today || (new Date(event.date) === today && event.time >= currentTime))
+    const pastEvents = this.props.events.filter(event => new Date(event.date) < today || (new Date(event.date) === today && event.time < currentTime ))
 
     return(
       <div>

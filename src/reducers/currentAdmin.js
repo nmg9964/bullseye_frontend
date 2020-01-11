@@ -10,9 +10,7 @@ export default function currentAdmin(state = initialState, action) {
       })
 
       case 'LOG_OUT':
-        return Object.assign({}, state, {
-          currentAdmin: {}
-        })
+          return { currentAdmin: {} }
 
     default:
       return state

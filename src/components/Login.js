@@ -5,8 +5,8 @@ import { login } from '../actions/admins'
 
 class Login extends React.Component {
   state = {
-    username: 'navganj',
-    password: 'password',
+    username: '',
+    password: '',
     events: []
   }
 
@@ -25,18 +25,18 @@ class Login extends React.Component {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
       },
-      body: JSON.stringify({
-        username: this.state.username,
-        password: this.state.password,
-        events: this.state.events
-      })
+      body: JSON.stringify(this.state)
     }
 
-    fetch('http://localhost:3001/administrators', reqObj)
+    fetch('http://localhost:3001/api/v1/login', reqObj)
     .then(resp => resp.json())
-    .then(admin => {
-      this.props.login(admin)
-      this.props.history.push('/admin')
+    .then(data => {
+      console.log(data)
+      if (data.error) {
+        alert('Invalid Credentials')
+      } else
+        this.props.login(data)
+        this.props.history.push('/admin')
     })
     this.setState({ username: '', password: '', events: [] })
   }

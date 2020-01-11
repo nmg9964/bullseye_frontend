@@ -10,9 +10,7 @@ export default function manageEvents(state = {
       })
 
       case 'LOG_OUT':
-        return Object.assign({}, state, {
-          events: []
-        })
+        return { events: [] }
 
       case 'SHOW_CARD':
         return Object.assign({}, state, {
