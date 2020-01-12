@@ -31,10 +31,10 @@ class Login extends React.Component {
     fetch('http://localhost:3001/api/v1/login', reqObj)
     .then(resp => resp.json())
     .then(data => {
-      console.log(data)
       if (data.error) {
         alert('Invalid Credentials')
       } else {
+        localStorage.setItem('token', data.token)
         this.props.login(data)
         this.props.history.push('/admin')
       }

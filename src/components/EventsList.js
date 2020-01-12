@@ -11,6 +11,7 @@ class EventsList extends React.Component {
   }
 
   handleLogoutClick = () => {
+    localStorage.removeItem('token')
     this.props.logout()
     this.props.history.push('/login')
   }
