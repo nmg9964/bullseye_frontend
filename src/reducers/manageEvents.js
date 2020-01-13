@@ -29,7 +29,6 @@ export default function manageEvents(state = {
           else
             return event
         })
-        
         return Object.assign({}, state, {
           events: editedEvents
         })
