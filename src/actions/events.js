@@ -42,9 +42,9 @@ export const updateEvent = event => {
   }
 }
 
-export const cancelEvent = event => {
+export const removeEvent = event => {
   return { 
-    type: 'CANCEL_EVENT',
+    type: 'REMOVE_EVENT',
     event
   }
 }

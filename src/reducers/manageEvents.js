@@ -49,9 +49,9 @@ export default function manageEvents(state = {
           events: editedEvents
         })
 
-      case 'CANCEL_EVENT':
+      case 'REMOVE_EVENT':
         return Object.assign({}, state, {
-          event: undefined
+          event: {}
         })
 
       case 'DELETE_EVENT':

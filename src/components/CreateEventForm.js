@@ -37,44 +37,11 @@ class CreateEventForm extends React.Component {
     this.setState({ [name]: value })
   }
 
-
-  // handleOnSubmit = event => {
-  //   const dateObj = this.state.date
-  //   const month = dateObj.getMonth() + 1
-  //   const day = dateObj.getDate()
-  //   const year = dateObj.getFullYear()
-  //   const newdate = year + "/" + month + "/" + day
-
-  //   event.preventDefault()
-
-  //   const reqObj = 
-  //     { 
-  //       method: 'POST',
-  //       headers: {
-  //       'Content-Type': 'application/json',
-  //       'Accept': 'application/json'
-  //       },
-  //       body: JSON.stringify({
-  //         date: newdate,
-  //         first_name: this.state.firstName,
-  //         last_name: this.state.lastName,
-  //         email_address: this.state.emailAddress,
-  //         phone_number: this.state.phoneNumber,
-  //         guest_count: this.state.guestCount,
-  //         message: this.state.message,
-  //         administrator_id: this.state.adminId
-  //       })
-  //     }
-
-  //   fetch('http://localhost:3001/api/v1/events', reqObj)
-  //   .then(resp => resp.json())
-  //   .then(event => {
-  //     console.log(event)
-    handleOnSubmit = event => {
-      event.preventDefault()
-      this.props.createEvent(this.state)
-      this.props.showConfirm()
-    }
+  handleOnSubmit = event => {
+    event.preventDefault()
+    this.props.createEvent(this.state)
+    this.props.showConfirm()
+  }
 
     // this.setState({ 
     //   date: new Date(),

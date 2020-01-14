@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { hideConfirm, cancelEvent } from '../actions/events'
+import { hideConfirm, removeEvent } from '../actions/events'
 import { Button } from 'semantic-ui-react'
 import { withRouter } from 'react-router'
 
@@ -8,42 +8,46 @@ class Confirmation extends React.Component {
 
   handleOnCancel = () => {
     this.props.hideConfirm()
-    this.props.cancelEvent()
+    this.props.removeEvent()
     this.props.history.push('/')
   }
 
-  // handleOnSubmit = event => {
-  //   const dateObj = this.state.date
-  //   const month = dateObj.getMonth() + 1
-  //   const day = dateObj.getDate()
-  //   const year = dateObj.getFullYear()
-  //   const newdate = year + "/" + month + "/" + day
+  handleOnSubmit = event => {
+    const dateObj = this.props.event.date
+    const month = dateObj.getMonth() + 1
+    const day = dateObj.getDate()
+    const year = dateObj.getFullYear()
+    const newDate = year + "/" + month + "/" + day
 
-  //   event.preventDefault()
+    event.preventDefault()
 
-  //   const reqObj = 
-  //     { 
-  //       method: 'POST',
-  //       headers: {
-  //       'Content-Type': 'application/json',
-  //       'Accept': 'application/json'
-  //       },
-  //       body: JSON.stringify({
-  //         date: newdate,
-  //         first_name: this.state.firstName,
-  //         last_name: this.state.lastName,
-  //         email_address: this.state.emailAddress,
-  //         phone_number: this.state.phoneNumber,
-  //         guest_count: this.state.guestCount,
-  //         message: this.state.message,
-  //         administrator_id: this.state.adminId
-  //       })
-  //     }
+    const reqObj = 
+      { 
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+        body: JSON.stringify({
+          date: newDate,
+          first_name: this.props.event.firstName,
+          last_name: this.props.event.lastName,
+          email_address: this.props.event.emailAddress,
+          phone_number: this.props.event.phoneNumber,
+          guest_count: this.props.event.guestCount,
+          message: this.props.event.message,
+          administrator_id: this.props.event.adminId
+        })
+      }
 
-  //   fetch('http://localhost:3001/api/v1/events', reqObj)
-  //   .then(resp => resp.json())
-  //   .then(event => console.log(event))
-  // }
+    fetch('http://localhost:3001/api/v1/events', reqObj)
+    .then(resp => resp.json())
+    .then(event => {
+      console.log(event)
+      alert('Booking successful! You will be e-mailed shortly')
+      this.handleOnCancel()
+    })
+  }
 
   render() {
     return(
@@ -55,7 +59,7 @@ class Confirmation extends React.Component {
           <p>Number of guests: {this.props.event.guestCount}</p>
           <p>Phone number: {this.props.event.phoneNumber}</p>
           <p>E-mail address: {this.props.event.emailAddress}</p>
-          <Button secondary onClick={() => this.props.hideConfirm()}>Go Back</Button>
+          <Button secondary onClick={this.props.hideConfirm}>Go Back</Button>
           <Button secondary onClick={this.handleOnSubmit}>Submit</Button>
           <Button secondary onClick={this.handleOnCancel}>Cancel</Button>
        </div>
@@ -69,7 +73,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   hideConfirm: () => dispatch(hideConfirm()),
-  cancelEvent: event => dispatch(cancelEvent(event))
+  removeEvent: event => dispatch(removeEvent(event))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Confirmation))
