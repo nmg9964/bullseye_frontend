@@ -24,6 +24,10 @@ class CreateEventForm extends React.Component {
     this.setState({ date: date })
   }
 
+  handleTimeChange = (event, { value}) => {
+    this.setState({ time: value })
+  }
+
   handleOnChange = event => {
     const { value, name } = event.target
     this.setState({ [name]: value })
@@ -82,7 +86,7 @@ class CreateEventForm extends React.Component {
             fluid label='Available Times*'
             options={options()}
             name='time'
-            onChange={this.handleOnChange}
+            onChange={this.handleTimeChange}
             placeholder='12:00 PM' />
             <Form.Input fluid label='First name*' type='text' name='firstName' value={this.state.firstName} placeholder='First name' onChange={this.handleOnChange} />
             <Form.Input fluid label='Last name*' type='text' name='lastName' value={this.state.lastName} placeholder='Last name' onChange={this.handleOnChange}/>
