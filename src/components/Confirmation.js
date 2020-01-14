@@ -61,6 +61,7 @@ class Confirmation extends React.Component {
        <div className='App'>
           <h1>Your Event Details</h1>
           <p>Date: &nbsp; {displayDate}</p>
+          <p>Time: &nbsp; {this.props.event.time}</p>
           <p>First Name: &nbsp; {this.props.event.firstName}</p>
           <p>Last Name: &nbsp; {this.props.event.lastName}</p>
           <p>Number of guests: &nbsp; {this.props.event.guestCount}</p>

@@ -6,7 +6,7 @@ class EventCard extends React.Component {
 
   // }
 
-  // handleCancel = event => {
+  // handleOnDelete = event => {
 
   // }
 

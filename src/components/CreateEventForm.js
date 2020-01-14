@@ -21,15 +21,7 @@ class CreateEventForm extends React.Component {
   }
 
   handleDateChange = date => {
-    this.setState({
-      date: date
-    })
-  }
-
-  handleTimeChange = time => {
-    this.setState({
-      time: time
-    })
+    this.setState({ date: date })
   }
 
   handleOnChange = event => {
@@ -44,24 +36,23 @@ class CreateEventForm extends React.Component {
   }
 
   render() {
-    const hour = this.state.time
     const weekdayOptions = [ 
-      { key: 0, text: '12:00 PM', value: hour },
-      { key: 1, text: '1:00 PM', value: hour },
-      { key: 2, text: '2:00 PM', value: hour },
-      { key: 3, text: '3:00 PM', value: hour },
-      { key: 4, text: '4:00 PM', value: hour },
-      { key: 5, text: '5:00 PM', value: hour },
-      { key: 6, text: '6:00 PM', value: hour },
-      { key: 7, text: '7:00 PM', value: hour },
-      { key: 8, text: '8:00 PM', value: hour }
+      { key: 0, text: '12:00 PM', value: '12:00 PM' },
+      { key: 1, text: '1:00 PM', value: '1:00 PM' },
+      { key: 2, text: '2:00 PM', value: '2:00 PM' },
+      { key: 3, text: '3:00 PM', value: '3:00 PM' },
+      { key: 4, text: '4:00 PM', value: '4:00 PM' },
+      { key: 5, text: '5:00 PM', value: '5:00 PM' },
+      { key: 6, text: '6:00 PM', value: '6:00 PM' },
+      { key: 7, text: '7:00 PM', value: '7:00 PM' },
+      { key: 8, text: '8:00 PM', value: '8:00 PM' }
     ]
 
     const weekendOptions = weekdayOptions.concat(
-      { key: 9, text: '9:00 PM', value: hour },
-      { key: 10, text: '10:00 PM', value: hour },
-      { key: 11, text: '11:00 PM', value: hour },
-      { key: 12, text: '12:00 AM', value: hour }
+      { key: 9, text: '9:00 PM', value: '9:00 PM' },
+      { key: 10, text: '10:00 PM', value: '10:00 PM' },
+      { key: 11, text: '11:00 PM', value: '11:00 PM' },
+      { key: 12, text: '12:00 AM', value: '12:00 AM' }
     )
 
     const options = () => {
@@ -85,21 +76,12 @@ class CreateEventForm extends React.Component {
           onChange={this.handleDateChange}
           value={this.state.date}/>
 
-          {/* <DatePicker 
-          selected={this.state.time} 
-          onChange={this.handleTimeChange}
-          value={this.state.time}
-          showTimeSelect
-          showTimeSelectOnly
-          timeIntervals={60}
-          timeCaption="Time"
-          dateFormat="hh:mm aa"/> */}
-
           <Form onSubmit={this.handleOnSubmit}>
           <Form.Group widths='equal'/>
             <Form.Select 
             fluid label='Available Times*'
             options={options()}
+            name='time'
             onChange={this.handleOnChange}
             placeholder='12:00 PM' />
             <Form.Input fluid label='First name*' type='text' name='firstName' value={this.state.firstName} placeholder='First name' onChange={this.handleOnChange} />
