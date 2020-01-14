@@ -1,7 +1,8 @@
 export default function manageEvents(state = {
   events: [],
   event: {},
-  renderEventCard: undefined
+  renderEventCard: undefined,
+  renderConfirmPage: false
   }, action) {
     switch(action.type) {
       case 'LOGIN':
@@ -27,6 +28,16 @@ export default function manageEvents(state = {
           event: action.eventData
         })
 
+      case 'SHOW_CONFIRM':
+        return Object.assign({}, state, {
+          renderConfirmPage: true
+        })
+
+      case 'HIDE_CONFIRM':
+        return Object.assign({}, state, {
+          renderConfirmPage: false
+        })
+
       case 'UPDATE_EVENT':
         let editedEvents = state.events.map(event => {
           if (event.id === action.event.id)
@@ -39,6 +50,11 @@ export default function manageEvents(state = {
         })
 
       case 'CANCEL_EVENT':
+        return Object.assign({}, state, {
+          event: undefined
+        })
+
+      case 'DELETE_EVENT':
         return Object.assign({}, state, {
           events: [...state.events.filter(event => event.id !== action.id)],
           renderEventCard: undefined

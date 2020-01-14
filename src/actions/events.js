@@ -16,15 +16,23 @@ export const createEvent = event => {
       id: event.id,
       date: event.date,
       time: event.time,
-      firstName: event.first_name,
-      lastName: event.last_name,
-      guestCount: event.guest_count,
-      phoneNumber: event.phone_number,
-      emailAddress: event.email_address,
+      firstName: event.firstName,
+      lastName: event.lastName,
+      guestCount: event.guestCount,
+      phoneNumber: event.phoneNumber,
+      emailAddress: event.emailAddress,
       message: event.message,
-      adminId: event.admin_id
+      adminId: event.adminId
     }
   }
+}
+
+export const showConfirm = () => {
+  return { type: 'SHOW_CONFIRM' }
+}
+
+export const hideConfirm = () => {
+  return { type: 'HIDE_CONFIRM' }
 }
 
 export const updateEvent = event => {
@@ -37,6 +45,13 @@ export const updateEvent = event => {
 export const cancelEvent = event => {
   return { 
     type: 'CANCEL_EVENT',
+    event
+  }
+}
+
+export const deleteEvent = event => {
+  return { 
+    type: 'DELETE_EVENT',
     id: event.id
   }
 }
