@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { deleteEvent } from '../actions/events'
 import { Button } from 'semantic-ui-react'
 
 class EventCard extends React.Component {
@@ -6,9 +8,19 @@ class EventCard extends React.Component {
 
   // }
 
-  // handleOnDelete = event => {
+  handleOnDelete = event => {
+    const reqObj = 
+    {
+      method: 'DELETE',
+      headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+      }
+    }
 
-  // }
+    fetch(`http://localhost:3001/api/v1/events/${event.id}`, reqObj)
+    this.props.deleteEvent(event)
+  }
 
   render() {
     return(
@@ -22,9 +34,13 @@ class EventCard extends React.Component {
         <p>E-mail address: &nbsp; {this.props.event.email_address}</p><br></br><br></br>
         <Button onClick={this.props.hideCard}>Back</Button> &nbsp;&nbsp; 
         <Button onClick={this.handleOnUpdate}>Update</Button> &nbsp;&nbsp; 
-        <Button onClick={this.handleOnDelete}>Delete</Button>
+        <Button onClick={() => this.handleOnDelete(this.props.event)}>Delete</Button>
       </div>
     )}
 }
 
-export default EventCard
+const mapDispatchToProps = dispatch => ({
+  deleteEvent: event => dispatch(deleteEvent(event))
+})
+
+export default connect(null, mapDispatchToProps)(EventCard)
