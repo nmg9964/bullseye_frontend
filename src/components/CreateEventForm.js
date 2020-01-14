@@ -1,4 +1,7 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { createEvent } from '../actions/events'
+
 import { Form } from 'semantic-ui-react'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css"
@@ -6,7 +9,14 @@ import "react-datepicker/dist/react-datepicker.css"
 class CreateEventForm extends React.Component {
   state = {
     date: new Date(),
-    time: new Date()
+    time: new Date(),
+    firstName: '',
+    lastName: '',
+    guestCount: 0,
+    phoneNumber: '',
+    emailAddress: '',
+    message: '',
+    adminId: 1
   }
 
   handleDateChange = date => {
@@ -20,6 +30,62 @@ class CreateEventForm extends React.Component {
       time: time
     })
   }
+
+  handleOnChange = event => {
+    const { value, name } = event.target
+    this.setState({
+      [name]: value
+    })
+  }
+
+
+  handleOnSubmit = event => {
+    const dateObj = this.state.date
+    const month = dateObj.getMonth() + 1
+    const day = dateObj.getDate()
+    const year = dateObj.getFullYear()
+    const newdate = year + "/" + month + "/" + day
+
+    event.preventDefault()
+
+    const reqObj = 
+      { 
+        method: 'POST',
+        headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          date: newdate,
+          first_name: this.state.firstName,
+          last_name: this.state.lastName,
+          email_address: this.state.emailAddress,
+          phone_number: this.state.phoneNumber,
+          guest_count: this.state.guestCount,
+          message: this.state.message,
+          administrator_id: this.state.adminId
+        })
+      }
+
+    fetch('http://localhost:3001/api/v1/events', reqObj)
+    .then(resp => resp.json())
+    .then(event => {
+      console.log(event)
+      this.props.createEvent(event)
+      // this.props.history.push
+    })
+    this.setState({ 
+      date: new Date(),
+      time: new Date(),
+      firstName: '',
+      lastName: '',
+      guestCount: '',
+      phoneNumber: '',
+      emailAddress: '',
+      message: '',
+      adminId: 1
+    })
+    }
 
   render() {
     return(
@@ -42,14 +108,14 @@ class CreateEventForm extends React.Component {
         timeCaption="Time"
         dateFormat="hh:mm aa"/>
 
-        <Form >
+        <Form onSubmit={this.handleOnSubmit}>
         <Form.Group widths='equal'/>
-          <Form.Input fluid label='First name' placeholder='First name' />
-          <Form.Input fluid label='Last name' placeholder='Last name' />
-          <Form.Input fluid label='Number of guests' placeholder='Number of guests' />
-          <Form.Input fluid label='Phone number' placeholder='Phone number' />
-          <Form.Input fluid label='E-mail address' placeholder='E-mail address' />
-          <Form.TextArea label='How did you hear about us? (optional)' /><br></br>
+          <Form.Input fluid label='First name*' type='text' name='firstName' value={this.state.firstName} placeholder='First name' onChange={this.handleOnChange} />
+          <Form.Input fluid label='Last name*' type='text' name='lastName' value={this.state.lastName} placeholder='Last name' onChange={this.handleOnChange}/>
+          <Form.Input fluid label='Number of guests*' type='number' max='10' name='guestCount' value={this.state.guestCount} placeholder='Number of guests' onChange={this.handleOnChange}/>
+          <Form.Input fluid label='Phone number*' type='text' name='phoneNumber' value={this.state.phoneNumber} placeholder='Phone number' onChange={this.handleOnChange}/>
+          <Form.Input fluid label='E-mail address*' type='text' name='emailAddress' value={this.state.emailAddress} placeholder='E-mail address' onChange={this.handleOnChange}/>
+          <Form.TextArea label='How did you hear about us? (optional)' name='message' value={this.state.message} onChange={this.handleOnChange}/><br></br>
           <Form.Button>Continue</Form.Button>
         </Form>
       </div>
@@ -57,4 +123,8 @@ class CreateEventForm extends React.Component {
   }
 }
 
-export default CreateEventForm
+const mapDispatchToProps = dispatch => ({
+  createEvent: event => dispatch(createEvent(event))
+})
+
+export default connect(null, mapDispatchToProps)(CreateEventForm)

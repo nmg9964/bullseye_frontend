@@ -22,6 +22,11 @@ export default function manageEvents(state = {
           renderEventCard: undefined
         })
 
+      case 'CREATE_EVENT':
+        return Object.assign({}, state, {
+          event: action.eventData
+        })
+
       case 'UPDATE_EVENT':
         let editedEvents = state.events.map(event => {
           if (event.id === action.event.id)
