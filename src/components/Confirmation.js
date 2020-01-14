@@ -17,7 +17,7 @@ class Confirmation extends React.Component {
     const month = dateObj.getMonth() + 1
     const day = dateObj.getDate()
     const year = dateObj.getFullYear()
-    const newDate = year + "/" + month + "/" + day
+    const submitDate = year + '-' + month + '-' + day
 
     event.preventDefault()
 
@@ -29,7 +29,7 @@ class Confirmation extends React.Component {
         'Accept': 'application/json'
       },
         body: JSON.stringify({
-          date: newDate,
+          date: submitDate,
           first_name: this.props.event.firstName,
           last_name: this.props.event.lastName,
           email_address: this.props.event.emailAddress,
@@ -50,10 +50,16 @@ class Confirmation extends React.Component {
   }
 
   render() {
+    const dateObj = this.props.event.date
+    const month = dateObj.getMonth() + 1
+    const day = dateObj.getDate()
+    const year = dateObj.getFullYear()
+    const displayDate = `${month}/${day}/${year}`
+
     return(
        <div className='App'>
-         <h1>Your Event Details</h1>
-          {/* <p>Date/Time: {this.props.event.date}</p> */}
+          <h1>Your Event Details</h1>
+          <p>Date: {displayDate}</p>
           <p>First Name: {this.props.event.firstName}</p>
           <p>Last Name: {this.props.event.lastName}</p>
           <p>Number of guests: {this.props.event.guestCount}</p>

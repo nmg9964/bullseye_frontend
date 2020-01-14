@@ -43,19 +43,6 @@ class CreateEventForm extends React.Component {
     this.props.showConfirm()
   }
 
-    // this.setState({ 
-    //   date: new Date(),
-    //   time: new Date(),
-    //   firstName: '',
-    //   lastName: '',
-    //   guestCount: '',
-    //   phoneNumber: '',
-    //   emailAddress: '',
-    //   message: '',
-    //   adminId: 1
-    // })
-    // }
-
   render() {
     return(
       <div>
