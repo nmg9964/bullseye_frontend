@@ -35,6 +35,17 @@ export const hideConfirm = () => {
   return { type: 'HIDE_CONFIRM' }
 }
 
+export const showEditForm = event => {
+  return {
+    type: 'SHOW_EDIT_FORM',
+    id: event.id
+  }
+}
+
+export const hideEditForm = () => {
+  return { type: 'HIDE_EDIT_FORM' }
+}
+
 export const updateEvent = event => {
   return {
     type: 'UPDATE_EVENT',

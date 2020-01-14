@@ -2,6 +2,7 @@ export default function manageEvents(state = {
   events: [],
   event: {},
   renderEventCard: undefined,
+  renderEditForm: undefined,
   renderConfirmPage: false
   }, action) {
     switch(action.type) {
@@ -36,6 +37,16 @@ export default function manageEvents(state = {
       case 'HIDE_CONFIRM':
         return Object.assign({}, state, {
           renderConfirmPage: false
+        })
+
+      case 'SHOW_EDIT_FORM':
+        return Object.assign({}, state, {
+          renderEditForm: action.id
+        })
+
+      case 'HIDE_EDIT_FORM':
+        return Object.assign({}, state, {
+          renderEditForm: undefined
         })
 
       case 'UPDATE_EVENT':
