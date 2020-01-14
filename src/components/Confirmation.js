@@ -51,20 +51,21 @@ class Confirmation extends React.Component {
 
   render() {
     const dateObj = this.props.event.date
+    const dayOfWeek = dateObj.toLocaleString('en-us', {weekday:'long'})
     const month = dateObj.getMonth() + 1
     const day = dateObj.getDate()
     const year = dateObj.getFullYear()
-    const displayDate = `${month}/${day}/${year}`
+    const displayDate = `${dayOfWeek} - ${month}/${day}/${year}`
 
     return(
        <div className='App'>
           <h1>Your Event Details</h1>
-          <p>Date: {displayDate}</p>
-          <p>First Name: {this.props.event.firstName}</p>
-          <p>Last Name: {this.props.event.lastName}</p>
-          <p>Number of guests: {this.props.event.guestCount}</p>
-          <p>Phone number: {this.props.event.phoneNumber}</p>
-          <p>E-mail address: {this.props.event.emailAddress}</p>
+          <p>Date: &nbsp; {displayDate}</p>
+          <p>First Name: &nbsp; {this.props.event.firstName}</p>
+          <p>Last Name: &nbsp; {this.props.event.lastName}</p>
+          <p>Number of guests: &nbsp; {this.props.event.guestCount}</p>
+          <p>Phone number: &nbsp; {this.props.event.phoneNumber}</p>
+          <p>E-mail address: &nbsp; {this.props.event.emailAddress}</p>
           <Button secondary onClick={this.props.hideConfirm}>Go Back</Button>
           <Button secondary onClick={this.handleOnSubmit}>Submit</Button>
           <Button secondary onClick={this.handleOnCancel}>Cancel</Button>

@@ -30,7 +30,7 @@ class EventsList extends React.Component {
           event={this.props.events.find(event => event.id === this.props.renderEventCard)}
           hideCard={this.props.hideCard}/> :
 
-        <div className='App'>
+        <div>
           <Header as='h1'>
             Welcome, {this.props.currentAdmin.username}!
           </Header><br></br>
