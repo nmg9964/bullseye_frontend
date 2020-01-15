@@ -1,8 +1,9 @@
 import React from 'react'
-import { Header } from 'semantic-ui-react'
-import { Button } from 'semantic-ui-react'
 import { withRouter } from 'react-router'
 import EventCard from './EventCard'
+
+import { Header } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 
 class EventsList extends React.Component {
 

@@ -24,10 +24,12 @@ class EventCard extends React.Component {
     return(
       <div>
         {this.props.renderEditForm ?
-        <EditEventForm /> :
+        <EditEventForm event={this.props.event}/> :
+        
         <div className='App'>
           <h1>{this.props.event.first_name} {this.props.event.last_name}</h1><br></br>
           <p>Date: &nbsp; {this.props.event.date}</p>
+          <p>Time &nbsp; {this.props.event.time}</p>
           <p>First Name: &nbsp; {this.props.event.first_name}</p>
           <p>Last Name: &nbsp; {this.props.event.last_name}</p>
           <p>Number of guests: &nbsp; {this.props.event.guest_count}</p>

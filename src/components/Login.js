@@ -1,7 +1,7 @@
 import React from 'react'
-import { Button, Form } from 'semantic-ui-react'
 import { connect } from 'react-redux'
 import { login } from '../actions/admins'
+import { Button, Form } from 'semantic-ui-react'
 
 class Login extends React.Component {
   state = {
