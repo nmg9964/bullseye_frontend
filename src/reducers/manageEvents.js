@@ -57,7 +57,8 @@ export default function manageEvents(state = {
             return event
         })
         return Object.assign({}, state, {
-          events: editedEvents
+          events: editedEvents,
+          renderEditForm: undefined
         })
 
       case 'REMOVE_EVENT':

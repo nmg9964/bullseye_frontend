@@ -7,7 +7,7 @@ import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css"
 
 const newDate = (date) => {
-  return new Date(`${date}T12:00:00.474Z`)
+  return new Date(`${date}T00:00:00`)
 }
 
 class EditEventForm extends React.Component {
@@ -38,9 +38,9 @@ class EditEventForm extends React.Component {
 
   handleOnSubmit = event => {
     const dateObj = this.state.date
-    const month = dateObj.getMonth() + 1
-    const day = dateObj.getDate()
-    const year = dateObj.getFullYear()
+    const month = dateObj.getUTCMonth() + 1
+    const day = dateObj.getUTCDate()
+    const year = dateObj.getUTCFullYear()
     const submitDate = year + '-' + month + '-' + day
 
     event.preventDefault()
@@ -69,7 +69,6 @@ class EditEventForm extends React.Component {
     .then(resp => resp.json())
     .then(event => { 
       this.props.updateEvent(event)
-      this.props.hideEditForm()
     })
   }
 
@@ -94,7 +93,6 @@ class EditEventForm extends React.Component {
     )
 
     const options = () => {
-      // const newDate = new Date(`${this.state.date}T12:00:00.474Z`)
       if (this.state.date.getDay() === 5 || this.state.date.getDay() === 6)
         return weekendOptions
       else

@@ -43,7 +43,6 @@ class Confirmation extends React.Component {
     fetch('http://localhost:3001/api/v1/events', reqObj)
     .then(resp => resp.json())
     .then(event => {
-      console.log(event)
       alert('Booking successful! You will be e-mailed shortly')
       this.handleOnCancel()
     })
@@ -52,9 +51,9 @@ class Confirmation extends React.Component {
   render() {
     const dateObj = this.props.event.date
     const dayOfWeek = dateObj.toLocaleString('en-us', {weekday:'long'})
-    const month = dateObj.getMonth() + 1
-    const day = dateObj.getDate()
-    const year = dateObj.getFullYear()
+    const month = dateObj.getUTCMonth() + 1
+    const day = dateObj.getUTCDate()
+    const year = dateObj.getUTCFullYear()
     const displayDate = `${dayOfWeek} - ${month}/${day}/${year}`
 
     return(

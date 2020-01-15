@@ -19,9 +19,18 @@ class EventsList extends React.Component {
 
   render () {
     let today = new Date()
-    let currentTime = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()
-    const upcomingEvents = this.props.events.filter(event => new Date(event.date) > today || (new Date(event.date) === today && event.time >= currentTime))
-    const pastEvents = this.props.events.filter(event => new Date(event.date) < today || (new Date(event.date) === today && event.time < currentTime ))
+    
+    const newDate = (date) => {
+      let dateObj = new Date(date)
+      const month = dateObj.getUTCMonth() + 1
+      const day = dateObj.getUTCDate()
+      const year = dateObj.getUTCFullYear()
+      return year + '-' + month + '-' + day
+    }
+
+    const todayEvents = this.props.events.filter(event => newDate(event.date) === newDate(today))
+    const futureEvents = this.props.events.filter(event => newDate(event.date) > newDate(today))
+    const pastEvents = this.props.events.filter(event => newDate(event.date) < newDate(today))
 
     return(
       <div>
@@ -31,19 +40,26 @@ class EventsList extends React.Component {
           event={this.props.events.find(event => event.id === this.props.renderEventCard)}
           hideCard={this.props.hideCard}/> :
 
-        <div>
+        <div className='App'>
           <Header as='h1'>
             Welcome, {this.props.currentAdmin.username}!
           </Header><br></br>
 
-          <h2>Upcoming Events</h2>
+          <h2>Today's Reservations</h2>
           <ul>
-            {upcomingEvents.map(event => {
+          {todayEvents.map(event => {
               return <li onClick={() => this.handleEventClick(event)}>{event.first_name}&nbsp;{event.last_name}</li>
             })}
           </ul><br></br>
 
-          <h2>Past Events</h2>
+          <h2>Future Reservations</h2>
+          <ul>
+            {futureEvents.map(event => {
+              return <li onClick={() => this.handleEventClick(event)}>{event.first_name}&nbsp;{event.last_name}</li>
+            })}
+          </ul><br></br>
+
+          <h2>Past Reservations</h2>
           <ul>
             {pastEvents.map(event => {
               return <li onClick={() => this.handleEventClick(event)}>{event.first_name}&nbsp;{event.last_name}</li>
