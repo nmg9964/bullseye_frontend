@@ -36,8 +36,8 @@ class EventCard extends React.Component {
           <p>Phone number: &nbsp; {this.props.event.phone_number}</p>
           <p>E-mail address: &nbsp; {this.props.event.email_address}</p><br></br><br></br>
           <Button onClick={this.props.hideCard}>Back</Button> &nbsp;&nbsp; 
-          <Button onClick={() => this.props.showEditForm(this.props.event)}>Update</Button> &nbsp;&nbsp; 
-          <Button onClick={() => this.handleOnDelete(this.props.event)}>Delete</Button>
+          <Button onClick={() => this.props.showEditForm(this.props.event)}>Update</Button><br></br><br></br>
+          <Button secondary onClick={() => this.handleOnDelete(this.props.event)}>Delete Event</Button>
         </div>}
       </div>
     )}

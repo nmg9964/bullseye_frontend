@@ -58,7 +58,7 @@ class Confirmation extends React.Component {
 
     return(
        <div className='App'>
-          <h1>Your Event Details</h1>
+          <h1>Your Session Details</h1>
           <p>Date: &nbsp; {displayDate}</p>
           <p>Time: &nbsp; {this.props.event.time}</p>
           <p>First Name: &nbsp; {this.props.event.firstName}</p>
@@ -66,7 +66,7 @@ class Confirmation extends React.Component {
           <p>Number of guests: &nbsp; {this.props.event.guestCount}</p>
           <p>Phone number: &nbsp; {this.props.event.phoneNumber}</p>
           <p>E-mail address: &nbsp; {this.props.event.emailAddress}</p>
-          <Button secondary onClick={this.props.hideConfirm}>Go Back</Button>
+          <Button secondary onClick={this.props.hideConfirm}>Back</Button>
           <Button secondary onClick={this.handleOnSubmit}>Submit</Button>
           <Button secondary onClick={this.handleOnCancel}>Cancel</Button>
        </div>

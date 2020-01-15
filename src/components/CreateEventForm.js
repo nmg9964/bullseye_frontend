@@ -17,7 +17,8 @@ class CreateEventForm extends React.Component {
     phoneNumber: '',
     emailAddress: '',
     message: '',
-    adminId: 1
+    adminId: 1,
+    availableTimes: []
   }
 
   handleDateChange = date => {
