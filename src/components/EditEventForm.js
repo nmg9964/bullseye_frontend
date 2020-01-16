@@ -88,7 +88,6 @@ class EditEventForm extends React.Component {
       this.state.availableTimes.map(time => {
         times.push({ key: key++, text: time, value: time })
       })
-      console.log(times)
       return times
     }
 
@@ -98,9 +97,9 @@ class EditEventForm extends React.Component {
         <h3>Select a Date</h3>
 
         <DatePicker
+        selected={this.state.date}
         onChange={this.handleDateChange}
-        value={this.state.date}
-        placeholderText={this.state.date}/>
+        value={this.state.date}/>
 
       <Form onSubmit={this.handleOnSubmit}>
         <Form.Group widths='equal'/>
