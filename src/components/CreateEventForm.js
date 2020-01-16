@@ -26,11 +26,11 @@ class CreateEventForm extends React.Component {
     const month = date.getMonth() + 1
     const day = date.getDate()
     const year = date.getFullYear()
-    const newDate = year + '-' + month + '-' + day
+    const fetchDate = year + '-' + month + '-' + day
 
-    fetch(`http://localhost:3001/api/v1/available_times/${newDate}`)
+    fetch(`http://localhost:3001/api/v1/available_times/${fetchDate}`)
     .then(resp => resp.json())
-    .then(times => { this.setState({ availableTimes: times }) })
+    .then(times => this.setState({ availableTimes: times }))
   }
 
   handleTimeChange = (event, { value}) => {
