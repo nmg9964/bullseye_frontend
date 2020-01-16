@@ -5,6 +5,7 @@ import { Button } from 'semantic-ui-react'
 import { withRouter } from 'react-router'
 
 class Confirmation extends React.Component {
+  state = { errors: [] }
 
   handleOnCancel = () => {
     this.props.hideConfirm()
@@ -28,8 +29,9 @@ class Confirmation extends React.Component {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-        body: JSON.stringify({
+        body: JSON.stringify({ event: {
           date: submitDate,
+          time: this.props.event.time,
           first_name: this.props.event.firstName,
           last_name: this.props.event.lastName,
           email_address: this.props.event.emailAddress,
@@ -37,14 +39,18 @@ class Confirmation extends React.Component {
           guest_count: this.props.event.guestCount,
           message: this.props.event.message,
           administrator_id: this.props.event.adminId
-        })
+        }})
       }
 
     fetch('http://localhost:3001/api/v1/events', reqObj)
     .then(resp => resp.json())
-    .then(event => {
-      alert('Booking successful! You will be e-mailed shortly')
-      this.handleOnCancel()
+    .then(data => { 
+      console.log(data)
+      if (data.error)
+        alert('Booking unsuccessful. Please fill in all required fields')
+      else
+        alert('Booking successful! You will be e-mailed shortly')
+        this.handleOnCancel()
     })
   }
 

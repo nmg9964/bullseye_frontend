@@ -9,7 +9,7 @@ import "react-datepicker/dist/react-datepicker.css"
 
 class CreateEventForm extends React.Component {
   state = {
-    date: new Date(),
+    date: '',
     time: '',
     firstName: '',
     lastName: '',
@@ -23,6 +23,14 @@ class CreateEventForm extends React.Component {
 
   handleDateChange = date => {
     this.setState({ date: date })
+    const month = date.getMonth() + 1
+    const day = date.getDate()
+    const year = date.getFullYear()
+    const newDate = year + '-' + month + '-' + day
+
+    fetch(`http://localhost:3001/api/v1/available_times/${newDate}`)
+    .then(resp => resp.json())
+    .then(times => { this.setState({ availableTimes: times }) })
   }
 
   handleTimeChange = (event, { value}) => {
@@ -41,30 +49,13 @@ class CreateEventForm extends React.Component {
   }
 
   render() {
-    const weekdayOptions = [ 
-      { key: 0, text: '12:00 PM', value: '12:00 PM' },
-      { key: 1, text: '1:00 PM', value: '1:00 PM' },
-      { key: 2, text: '2:00 PM', value: '2:00 PM' },
-      { key: 3, text: '3:00 PM', value: '3:00 PM' },
-      { key: 4, text: '4:00 PM', value: '4:00 PM' },
-      { key: 5, text: '5:00 PM', value: '5:00 PM' },
-      { key: 6, text: '6:00 PM', value: '6:00 PM' },
-      { key: 7, text: '7:00 PM', value: '7:00 PM' },
-      { key: 8, text: '8:00 PM', value: '8:00 PM' }
-    ]
-
-    const weekendOptions = weekdayOptions.concat(
-      { key: 9, text: '9:00 PM', value: '9:00 PM' },
-      { key: 10, text: '10:00 PM', value: '10:00 PM' },
-      { key: 11, text: '11:00 PM', value: '11:00 PM' },
-      { key: 12, text: '12:00 AM', value: '12:00 AM' }
-    )
-
     const options = () => {
-      if (this.state.date.getDay() === 5 || this.state.date.getDay() === 6)
-        return weekendOptions
-      else
-        return weekdayOptions
+      let times = []
+      let key = 0
+      this.state.availableTimes.map(time => {
+        times.push({ key: key++, text: time, value: time })
+      })
+      return times
     }
 
     return(
@@ -79,7 +70,8 @@ class CreateEventForm extends React.Component {
           <DatePicker
           selected={this.state.date}
           onChange={this.handleDateChange}
-          value={this.state.date}/>
+          value={this.state.date}
+          placeholderText='MM/DD/YYYY' />
 
           <Form onSubmit={this.handleOnSubmit}>
           <Form.Group widths='equal'/>
