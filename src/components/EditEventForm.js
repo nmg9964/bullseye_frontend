@@ -98,8 +98,8 @@ class EditEventForm extends React.Component {
 
         <DatePicker
         selected={this.state.date}
-        onChange={this.handleDateChange}
-        value={this.state.date}/>
+        value={this.state.date}
+        onChange={this.handleDateChange}/>
 
       <Form onSubmit={this.handleOnSubmit}>
         <Form.Group widths='equal'/>
