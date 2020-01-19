@@ -6,6 +6,7 @@ class Navbar extends React.Component {
   
   render() {
     return (
+      <div className='navbar'>
       <Menu secondary>
         <img src='https://www.bullseyeaxelounge.com/wp-content/themes/Website55889577/images/logobig.png' className='ui big image' alt='BullsEye Axe Lounge'/>
 
@@ -46,6 +47,7 @@ class Navbar extends React.Component {
           >Contact Us</NavLink>
 
       </Menu>
+      </div>
     )
   }
 }
