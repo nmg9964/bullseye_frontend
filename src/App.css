@@ -13,7 +13,8 @@
 }
 
 .navbar {
-  background-color: #4f5155;
+  background-color: #707580;
+  /* background-image: url('https://www.bullseyeaxelounge.com/wp-content/uploads/2019/09/1.1.jpg'); */
 }
 
 .App-header {
@@ -29,4 +30,8 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.menu {
+  font-size: large;
 }
