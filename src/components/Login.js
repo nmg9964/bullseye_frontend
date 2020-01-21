@@ -44,6 +44,7 @@ class Login extends React.Component {
   
   render() {
     return(
+      <div className='App'>
       <div className='login-form'>
         <h1>Administrator Login</h1>
         <Form onSubmit={this.handleOnSubmit}>
@@ -67,8 +68,9 @@ class Login extends React.Component {
             onChange={this.handleOnChange}/>
           </Form.Field>
 
-          <Button primary type='submit'>Login</Button>
+          <Button secondary type='submit'>Login</Button>
         </Form>
+      </div>
       </div>
     )
   }

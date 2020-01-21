@@ -86,11 +86,9 @@ class CreateEventForm extends React.Component {
             <Form.Input fluid label='Phone number*' type='text' name='phoneNumber' value={this.state.phoneNumber} placeholder='Phone number' onChange={this.handleOnChange}/>
             <Form.Input fluid label='E-mail address*' type='text' name='emailAddress' value={this.state.emailAddress} placeholder='E-mail address' onChange={this.handleOnChange}/>
             <Form.TextArea label='How did you hear about us? (optional)' name='message' value={this.state.message} onChange={this.handleOnChange}/><br></br>
-            <Form.Button secondary>Continue</Form.Button>
+            <Form.Button size='huge' secondary>Continue</Form.Button>
           </Form><br></br><br></br>
         </div>}
-        
-        
       </div>
     )
   }

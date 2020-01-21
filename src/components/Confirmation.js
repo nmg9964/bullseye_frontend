@@ -72,9 +72,9 @@ class Confirmation extends React.Component {
           <p>Number of guests: &nbsp; {this.props.event.guestCount}</p>
           <p>Phone number: &nbsp; {this.props.event.phoneNumber}</p>
           <p>E-mail address: &nbsp; {this.props.event.emailAddress}</p>
-          <Button secondary onClick={this.props.hideConfirm}>Back</Button>
-          <Button secondary onClick={this.handleOnSubmit}>Submit</Button>
-          <Button secondary onClick={this.handleOnCancel}>Cancel</Button>
+          <Button secondary size='big' onClick={this.props.hideConfirm}>Back</Button>
+          <Button secondary size='big' onClick={this.handleOnSubmit}>Submit</Button>
+          <Button secondary size='big' onClick={this.handleOnCancel}>Cancel</Button>
           <br></br><br></br>
        </div>
     )
