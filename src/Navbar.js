@@ -7,52 +7,52 @@ class Navbar extends React.Component {
   render() {
     return (
       <div className='navbar'>
-      <Menu secondary size='large'>
+        <Menu secondary size='large'>
           <Image size='mini' src='https://www.bullseyeaxelounge.com/wp-content/themes/Website55889577/images/logobig.png' className='ui big image' alt='BullsEye Axe Lounge'/>
         
-        <NavLink
+          <NavLink
           className='link item'
           activeClassName='menu'
           to='/'
           exact
-        >Home</NavLink>
+          >Home</NavLink>
 
-        <NavLink
+          <NavLink
           className='link item'
           activeClassName='menu'
           to='/'
           exact
           >About Us</NavLink>
 
-        <NavLink
+          <NavLink
           className='link item'
           activeClassName='menu'
           to='/'
           exact
           >FAQ</NavLink>
 
-        <NavLink
+          <NavLink
           className='link item'
           activeClassName='menu'
           to='/'
           exact
           >Blog</NavLink>
 
-        <NavLink
+          <NavLink
           className='link item'
           activeClassName='menu'
           to='/'
           exact
           >Gift Cards</NavLink>
 
-        <NavLink
+          <NavLink
           className='link item'
           activeClassName='menu'
           to='/'
           exact
           >Contact Us</NavLink>
 
-      </Menu>
+        </Menu>
       </div>
     )
   }

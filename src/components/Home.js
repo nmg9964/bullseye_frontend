@@ -7,7 +7,7 @@ class Home extends React.Component {
       return(
         <div className='App-background'>
           <Header size='huge' color='grey' textAlign='center'>
-            AXE THROWING IN THE ARBORETUM OF SOUTH BARRINGTON
+            AXE THROWING IN THE ARBORETUM OF SOUTH BARRINGTON, IL
           </Header>
 
           <Header size='large' color='grey' textAlign='center'>
@@ -84,6 +84,20 @@ class Home extends React.Component {
 
             <Grid.Column>
               <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/10/ScreenShot20191017at3.06.02PM.png' alt='BullsEye Axe Lounge'/>
+            </Grid.Column>
+
+            <Grid.Row centered>
+              <Button  size='massive' secondary onClick={() => this.props.history.push('/about-us')}>Read More</Button>
+            </Grid.Row>
+          </Grid>
+
+          <Divider section hidden />
+
+          <Header size='huge' color='grey' textAlign='center'>OFFICIAL MEMBER OF THE WORLD AXE LEAGUE</Header><br></br>
+
+          <Grid>
+            <Grid.Column href='https://worldaxethrowingleague.com/'>
+                <Image centered size='medium' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/09/WATLlogowhiteborder.png' alt='World Axe Throwing League'/>
             </Grid.Column>
           </Grid>
 
