@@ -5,7 +5,7 @@ class Home extends React.Component {
 
     render () {
       return(
-        <div className='App-background'>
+        <div className='App-home'>
           
           <Header size='huge' color='grey' textAlign='center'>
             AXE THROWING IN THE ARBORETUM OF SOUTH BARRINGTON, IL
@@ -100,13 +100,10 @@ class Home extends React.Component {
             <Grid.Column href='https://worldaxethrowingleague.com/'>
                 <Image centered size='medium' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/09/WATLlogowhiteborder.png' alt='World Axe Throwing League'/>
             </Grid.Column>
-          </Grid>
-
-          <Divider section hidden />
-
-          <p className='footer'>©BullsEye Axe Lounge 2020</p>
-
+          </Grid><br></br>
         </div>
+
+        
       )
     }
   }

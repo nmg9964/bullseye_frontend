@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { hideConfirm, removeEvent } from '../actions/events'
-import { Button } from 'semantic-ui-react'
+import { Button, Divider } from 'semantic-ui-react'
 import { withRouter } from 'react-router'
 
 class Confirmation extends React.Component {
@@ -63,7 +63,7 @@ class Confirmation extends React.Component {
     const displayDate = `${dayOfWeek} - ${month}/${day}/${year}`
 
     return(
-       <div className='App'>
+       <div className='confirm'>
           <h1>Your Session Details</h1>
           <p>Date: &nbsp; {displayDate}</p>
           <p>Time: &nbsp; {this.props.event.time}</p>
@@ -75,6 +75,7 @@ class Confirmation extends React.Component {
           <Button secondary onClick={this.props.hideConfirm}>Back</Button>
           <Button secondary onClick={this.handleOnSubmit}>Submit</Button>
           <Button secondary onClick={this.handleOnCancel}>Cancel</Button>
+          <br></br><br></br>
        </div>
     )
   }

@@ -1,7 +1,9 @@
 .App {
   background-color: #707580;
   text-align: center;
-  align-items: center;
+  height: 100%;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
 .App-form {
@@ -12,12 +14,14 @@
   color: 'grey'
 }
 
-.navbar {
-  background-color: #707580;
+.App-home {
+  background-color: #282c34;
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-.App-background {
-  background-color: #282c34;
+.navbar {
+  background-color: #707580;
 }
 
 .nav-link {
@@ -25,21 +29,15 @@
   font-size: x-large;
 }
 
-.menu {
-  font-size: large;
-}
-
 .text-area {
   color: grey;
   font-size: large;
 }
 
-.footer {
+.text-center {
   color: grey;
   font-size: large;
   text-align: center;
-  background-color: black;
-  height: 100px;
 }
 
 .login-form {
@@ -51,4 +49,9 @@
 
 .fields {
   color: grey;
+}
+
+.confirm {
+  text-align: center;
+  font-size: large;
 }

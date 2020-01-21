@@ -59,11 +59,11 @@ class CreateEventForm extends React.Component {
     }
 
     return(
-      <div>
+      <div className='App'>
         {this.props.renderConfirmPage ?
         <Confirmation /> :
 
-        <div className='App'>
+        <div>
           <Header size='huge'>Book a Session!</Header>
           <Header size='medium'>Select a Date</Header>
           <DatePicker
@@ -90,7 +90,7 @@ class CreateEventForm extends React.Component {
           </Form><br></br><br></br>
         </div>}
         
-        <p className='footer'>©BullsEye Axe Lounge 2020</p>
+        
       </div>
     )
   }
