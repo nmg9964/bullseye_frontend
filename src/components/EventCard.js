@@ -22,11 +22,11 @@ class EventCard extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className='App'>
         {this.props.renderEditForm ?
         <EditEventForm event={this.props.event}/> :
         
-        <div className='App'>
+        <div className='confirm'>
           <h1>{this.props.event.first_name} {this.props.event.last_name}</h1><br></br>
           <p>Date: &nbsp; {this.props.event.date}</p>
           <p>Time &nbsp; {this.props.event.time}</p>
@@ -35,9 +35,9 @@ class EventCard extends React.Component {
           <p>Number of guests: &nbsp; {this.props.event.guest_count}</p>
           <p>Phone number: &nbsp; {this.props.event.phone_number}</p>
           <p>E-mail address: &nbsp; {this.props.event.email_address}</p><br></br><br></br>
-          <Button onClick={this.props.hideCard}>Back</Button> &nbsp;&nbsp; 
-          <Button onClick={() => this.props.showEditForm(this.props.event)}>Update Session</Button><br></br><br></br>
-          <Button secondary onClick={() => this.handleOnDelete(this.props.event)}>Delete Session</Button>
+          <Button size='big' secondary onClick={this.props.hideCard}>Back</Button>&nbsp;
+          <Button size='big' secondary onClick={() => this.props.showEditForm(this.props.event)}>Update Session</Button><br></br><br></br>
+          <Button size='big' secondary onClick={() => this.handleOnDelete(this.props.event)}>Delete Session</Button>
         </div>}
       </div>
     )}

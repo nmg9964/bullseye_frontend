@@ -82,7 +82,9 @@ class EventsList extends React.Component {
           <List selection size='big'>
           <List.Header as='h2'>Selected Reservations</List.Header>
             {filteredEvents.map(event => {
-              return <List.Item onClick={() => this.handleEventClick(event)}>{event.first_name}&nbsp;{event.last_name}</List.Item> 
+              return <List.Item onClick={() => this.handleEventClick(event)}>
+                {event.first_name}&nbsp;{event.last_name} | {event.date}
+                </List.Item> 
             })}
           </List>
         </div>}

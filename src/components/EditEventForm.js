@@ -93,7 +93,6 @@ class EditEventForm extends React.Component {
 
     return(
       <div className='App'>
-        <h1>Update Event</h1>
         <h3>Select a Date</h3>
 
         <DatePicker
@@ -101,7 +100,7 @@ class EditEventForm extends React.Component {
         value={this.state.date}
         onChange={this.handleDateChange}/>
 
-      <Form onSubmit={this.handleOnSubmit}>
+      <Form onSubmit={this.handleOnSubmit} className='App-form'>
         <Form.Group widths='equal'/>
         <Form.Select 
         fluid label='Available Times*'
@@ -114,9 +113,9 @@ class EditEventForm extends React.Component {
         <Form.Input fluid label='Number of guests*' type='number' min='0' max='9' name='guestCount' value={this.state.guestCount} placeholder='Number of guests' onChange={this.handleOnChange}/>
         <Form.Input fluid label='Phone number*' type='text' name='phoneNumber' value={this.state.phoneNumber} placeholder='Phone number' onChange={this.handleOnChange}/>
         <Form.Input fluid label='E-mail address*' type='text' name='emailAddress' value={this.state.emailAddress} placeholder='E-mail address' onChange={this.handleOnChange}/>
-        <Form.Button>Submit</Form.Button>
-      </Form><br></br>
-        <Button onClick={this.props.hideEditForm}>Back</Button> 
+        <Form.Button size='big' secondary>Submit</Form.Button>
+        <Button size='big' secondary onClick={this.props.hideEditForm}>Back</Button> 
+      </Form>
       </div>
     )}
 }

@@ -47,10 +47,13 @@ class Login extends React.Component {
       <div className='App'>
       <div className='login-form'>
         <h1>Administrator Login</h1>
-        <Form onSubmit={this.handleOnSubmit}>
+        <Form size='large' onSubmit={this.handleOnSubmit}>
           <Form.Field>
             <label>Username</label>
             <input 
+            fluid 
+            icon='user'
+            iconPosition='left'
             type='text' 
             name='username' 
             value={this.state.username} 
@@ -60,7 +63,10 @@ class Login extends React.Component {
 
           <Form.Field>
             <label>Password</label>
-            <input 
+            <input
+            fluid
+            icon='lock'
+            iconPosition='left'
             type='password'
             name='password'
             value={this.state.password} 
