@@ -33,3 +33,9 @@
   color: grey;
   font-size: large;
 }
+
+.text-center {
+  color: grey;
+  font-size: large;
+  text-align: center;
+}

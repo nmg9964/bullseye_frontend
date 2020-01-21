@@ -11,7 +11,7 @@ class Home extends React.Component {
           </Header>
 
           <Header size='large' color='grey' textAlign='center'>
-           COMING SOON TO THE STREETS OF WOODFIELD
+           COMING SOON TO THE STREETS OF WOODFIELD!
           </Header>
 
           <Divider section hidden />
@@ -62,6 +62,30 @@ class Home extends React.Component {
             </Grid.Column>
           </Grid>
 
+          <Divider section hidden />
+
+          <Header size='huge' color='grey' textAlign='center'>LOCATION IS EVERYTHING</Header>
+
+          <p className='text-center'>
+          Located in the action-filled Arboretum of South Barrington.
+          Surrounded by plenty of upscale restaurants, 
+          bars and entertainment. A trip to Bullseye Axe Lounge is 
+          one filled with smiles and laughter.
+          </p>
+
+          <Grid container columns={3}>
+            <Grid.Column>
+              <Image  size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/10/ScreenShot20191017at12.08.31AM.png' alt='BullsEye Axe Lounge'/>
+            </Grid.Column>
+
+            <Grid.Column>
+              <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/09/1.1.jpg' alt='BullsEye Axe Lounge'/>
+            </Grid.Column>
+
+            <Grid.Column>
+              <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/10/ScreenShot20191017at3.06.02PM.png' alt='BullsEye Axe Lounge'/>
+            </Grid.Column>
+          </Grid>
 
         </div>
       )
