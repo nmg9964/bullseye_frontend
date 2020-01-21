@@ -1,15 +1,15 @@
-.login-form {
-  width: 300px;
-  position: absolute;
-  left: 40%;
-  top: 40%;
+.App {
+  background-color: #707580;
+  text-align: center;
+  align-items: center;
 }
 
-.App {
+.App-form {
   width: 300px;
   position: absolute;
   left: 40%;
   top: 40%;
+  color: 'grey'
 }
 
 .navbar {
@@ -34,8 +34,21 @@
   font-size: large;
 }
 
-.text-center {
+.footer {
   color: grey;
   font-size: large;
   text-align: center;
+  background-color: black;
+  height: 100px;
+}
+
+.login-form {
+  width: 300px;
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+
+.fields {
+  color: grey;
 }

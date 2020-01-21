@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { createEvent, showConfirm } from '../actions/events'
 import Confirmation from './Confirmation'
 
-import { Form } from 'semantic-ui-react'
+import { Header, Form, Divider } from 'semantic-ui-react'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css"
 
@@ -64,15 +64,15 @@ class CreateEventForm extends React.Component {
         <Confirmation /> :
 
         <div className='App'>
-          <h1>Book a Session!</h1>
-          <h3>Select a Date</h3>
-
+          <Header size='huge'>Book a Session!</Header>
+          <Header size='medium'>Select a Date</Header>
           <DatePicker
           selected={this.state.date}
           onChange={this.handleDateChange}
-          value={this.state.date} />
+          value={this.state.date} 
+          minDate={this.state.date}/>
 
-          <Form onSubmit={this.handleOnSubmit}>
+          <Form onSubmit={this.handleOnSubmit} className='App-form'>
           <Form.Group widths='equal'/>
             <Form.Select 
             fluid label='Available Times*'
@@ -86,9 +86,11 @@ class CreateEventForm extends React.Component {
             <Form.Input fluid label='Phone number*' type='text' name='phoneNumber' value={this.state.phoneNumber} placeholder='Phone number' onChange={this.handleOnChange}/>
             <Form.Input fluid label='E-mail address*' type='text' name='emailAddress' value={this.state.emailAddress} placeholder='E-mail address' onChange={this.handleOnChange}/>
             <Form.TextArea label='How did you hear about us? (optional)' name='message' value={this.state.message} onChange={this.handleOnChange}/><br></br>
-            <Form.Button>Continue</Form.Button>
-          </Form> 
+            <Form.Button secondary>Continue</Form.Button>
+          </Form><br></br><br></br>
         </div>}
+        
+        <p className='footer'>©BullsEye Axe Lounge 2020</p>
       </div>
     )
   }

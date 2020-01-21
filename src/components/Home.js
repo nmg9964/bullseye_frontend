@@ -104,7 +104,7 @@ class Home extends React.Component {
 
           <Divider section hidden />
 
-          <p className='text-center'>©BullsEye Axe Lounge 2020</p>
+          <p className='footer'>©BullsEye Axe Lounge 2020</p>
 
         </div>
       )
