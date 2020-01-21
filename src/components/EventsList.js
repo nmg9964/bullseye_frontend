@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouter } from 'react-router'
 import EventCard from './EventCard'
 
-import { Header, Button, Select } from 'semantic-ui-react'
+import { Header, Button, Select, List } from 'semantic-ui-react'
 
 class EventsList extends React.Component {
   state = { selectBookings: 'All' }
@@ -68,23 +68,23 @@ class EventsList extends React.Component {
             Welcome, {this.props.currentAdmin.username}!
           </Header><br></br>
 
+          <Button secondary onClick={this.handleLogoutClick}>
+            Logout
+          </Button>
+
           <Select
           selection
           selected={this.state.selectBookings}
           value={this.state.selectBookings}
           onChange={this.handleOnChange} 
-          options={bookingOptions} />&nbsp;&nbsp;
+          options={bookingOptions} /><br></br>
 
-          <Button primary onClick={this.handleLogoutClick}>
-            Logout
-          </Button>
-
-          <h2>Reservations</h2>
-          <ul>
+          <List selection size='big'>
+          <List.Header as='h2'>Selected Reservations</List.Header>
             {filteredEvents.map(event => {
-              return <li onClick={() => this.handleEventClick(event)}>{event.first_name}&nbsp;{event.last_name}</li>
+              return <List.Item onClick={() => this.handleEventClick(event)}>{event.first_name}&nbsp;{event.last_name}</List.Item> 
             })}
-          </ul>
+          </List>
         </div>}
 
       </div>
