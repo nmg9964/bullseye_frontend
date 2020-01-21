@@ -55,6 +55,8 @@ class EventsList extends React.Component {
         break
     }
 
+    const sortedEvents = filteredEvents.sort((x, y) => x.date < y.date ? 1 : -1)
+
     return(
       <div>
 
@@ -81,7 +83,7 @@ class EventsList extends React.Component {
 
           <List selection size='big'>
           <List.Header as='h2'>Selected Reservations</List.Header>
-            {filteredEvents.map(event => {
+            {sortedEvents.map(event => {
               return <List.Item onClick={() => this.handleEventClick(event)}>
                 {event.first_name}&nbsp;{event.last_name} | {event.date}
                 </List.Item> 
