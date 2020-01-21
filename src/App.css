@@ -38,3 +38,8 @@
   font-size: large;
   text-align: center;
 }
+
+.nav-image {
+  height: 300px;
+  width: 200px;
+}

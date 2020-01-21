@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Menu, Image } from 'semantic-ui-react'
 
 class Navbar extends React.Component {
@@ -8,49 +8,59 @@ class Navbar extends React.Component {
     return (
       <div className='navbar'>
         <Menu secondary size='large'>
-          <Image size='mini' src='https://www.bullseyeaxelounge.com/wp-content/themes/Website55889577/images/logobig.png' className='ui big image' alt='BullsEye Axe Lounge'/>
-        
-          <NavLink
+          <Menu.Item>
+            <Image size='medium' src='/logobig.png' alt='BullsEye Axe Lounge'/>
+          </Menu.Item>
+      
+          <Menu.Item><Link
           className='link item'
           activeClassName='menu'
           to='/'
           exact
-          >Home</NavLink>
+          >Home</Link>
+          </Menu.Item>
 
-          <NavLink
+          <Menu.Item><Link
           className='link item'
           activeClassName='menu'
-          to='/'
+          to='/about-us'
           exact
-          >About Us</NavLink>
+          >About Us</Link>
+          </Menu.Item>
 
-          <NavLink
+          <Menu.Item><Link
           className='link item'
           activeClassName='menu'
           to='/'
           exact
-          >FAQ</NavLink>
+          >FAQ</Link>
+          </Menu.Item>
 
-          <NavLink
+          <Menu.Item><Link
           className='link item'
           activeClassName='menu'
           to='/'
           exact
-          >Blog</NavLink>
+          >Blog</Link>
+          </Menu.Item>
 
-          <NavLink
+          <Menu.Item>
+          <Link
           className='link item'
           activeClassName='menu'
           to='/'
           exact
-          >Gift Cards</NavLink>
+          >Gift Cards</Link>
+          </Menu.Item>
 
-          <NavLink
+          <Menu.Item>
+          <Link
           className='link item'
           activeClassName='menu'
           to='/'
           exact
-          >Contact Us</NavLink>
+          >Contact Us</Link>
+          </Menu.Item>
 
         </Menu>
       </div>
