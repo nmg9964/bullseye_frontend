@@ -101,6 +101,10 @@ class Home extends React.Component {
             </Grid.Column>
           </Grid>
 
+          <Divider section hidden />
+
+          <p className='text-center'>©BullsEye Axe Lounge 2020</p>
+
         </div>
       )
     }
