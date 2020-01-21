@@ -6,6 +6,7 @@ class Home extends React.Component {
     render () {
       return(
         <div className='App-background'>
+          
           <Header size='huge' color='grey' textAlign='center'>
             AXE THROWING IN THE ARBORETUM OF SOUTH BARRINGTON, IL
           </Header>

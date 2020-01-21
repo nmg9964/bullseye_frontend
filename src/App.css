@@ -20,8 +20,9 @@
   background-color: #282c34;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-link {
+  color: #030303;
+  font-size: x-large;
 }
 
 .menu {
@@ -37,9 +38,4 @@
   color: grey;
   font-size: large;
   text-align: center;
-}
-
-.nav-image {
-  height: 300px;
-  width: 200px;
 }
