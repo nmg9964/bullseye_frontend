@@ -19,11 +19,11 @@ class Home extends React.Component {
 
           <Grid centered columns={1}>
             <Grid.Column>
-              <Embed
-              id='lTno4Aw3O_U'
-              source='youtube'
-              autoplay={true}
-              active={true} />
+            <iframe
+            className='iframe'
+            src="https://www.youtube.com/embed/T_apDtxNZYc?autoplay=1&mute=1&enablejsapi=1"
+            frameborder="0"
+            ></iframe>
             </Grid.Column>
 
             <Grid.Row>
