@@ -36,6 +36,7 @@ class About extends React.Component {
               BullsEye Axe Lounge cares for things that are much greater than profits. 
               We see and feel that our only home, Earth, is under immense scrutiny. Mother Nature is under attack by our way of life.  
               Let’s all learn the balance of opposites and implement it into our daily lives as nourish our home back to good health.
+              Check out our tree certificates below!
              </p>
             </Grid.Column>
           </Grid>
@@ -43,20 +44,22 @@ class About extends React.Component {
           <Divider section hidden />
 
           <Grid container columns={3}>
+            <Grid.Column>
+              <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/11/IMG_5733.jpg' alt='BullsEye Axe Lounge'/>
+            </Grid.Column>
 
-          <Grid.Column>
-            <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/11/IMG_5733.jpg' alt='BullsEye Axe Lounge'/>
-          </Grid.Column>
+            <Grid.Column>
+             <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/12/Screen-Shot-2019-12-03-at-11.10.15-AM-copy.jpg' alt='BullsEye Axe Lounge'/>
+            </Grid.Column>
 
-          <Grid.Column>
-            <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/12/Screen-Shot-2019-12-03-at-11.10.15-AM-copy.jpg' alt='BullsEye Axe Lounge'/>
-          </Grid.Column>
-
-          <Grid.Column>
-            <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2020/01/Screen-Shot-2020-01-03-at-11.56.33-PM-1024x793.png' alt='BullsEye Axe Lounge'/>
-          </Grid.Column>
-
+            <Grid.Column>
+              <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2020/01/Screen-Shot-2020-01-03-at-11.56.33-PM-1024x793.png' alt='BullsEye Axe Lounge'/>
+            </Grid.Column>
           </Grid>
+
+          <Divider section hidden />
+
+          <p className='text-center'>©BullsEye Axe Lounge 2020</p>
 
         </div>
       )}

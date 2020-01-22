@@ -65,7 +65,7 @@ class CreateEventForm extends React.Component {
 
         <div>
           <Header size='huge'>Book a Session!</Header>
-          <Header size='medium'>Select a Date</Header>
+          <Header size='medium'>Select a Date*</Header>
           <DatePicker
           selected={this.state.date}
           onChange={this.handleDateChange}

@@ -94,7 +94,7 @@ class Home extends React.Component {
 
           <Divider section hidden />
 
-          <h1 className='label'>OFFICIAL MEMBER OF THE WORLD AXE LEAGUE</h1><br></br>
+          <h1 className='label'>OFFICIAL MEMBER OF THE WORLD AXE THROWING LEAGUE</h1><br></br>
 
           <Grid>
             <Grid.Column href='https://worldaxethrowingleague.com/'>
