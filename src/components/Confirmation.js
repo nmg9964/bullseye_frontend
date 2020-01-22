@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { hideConfirm, removeEvent } from '../actions/events'
-import { Button, Divider } from 'semantic-ui-react'
+import { Button } from 'semantic-ui-react'
 import { withRouter } from 'react-router'
 
 class Confirmation extends React.Component {
@@ -46,12 +46,13 @@ class Confirmation extends React.Component {
     .then(resp => resp.json())
     .then(data => { 
       console.log(data)
-      if (data.error)
-        alert('Booking unsuccessful. Please fill in all required fields')
-      else
+      if (data.error) {
+        alert('Booking unsuccessful. Please fill in all required fields with a valid e-mail address.')
+        this.props.hideConfirm()
+      } else {
         alert('Booking successful! You will be e-mailed shortly')
         this.handleOnCancel()
-    })
+    }})
   }
 
   render() {
