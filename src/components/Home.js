@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Divider, Button, Embed, Image, Header } from 'semantic-ui-react'
+import { Grid, Divider, Button, Image, Header } from 'semantic-ui-react'
 
 class Home extends React.Component {
 
@@ -7,13 +7,13 @@ class Home extends React.Component {
       return(
         <div className='App-home'>
           
-          <Header size='huge' color='grey' textAlign='center'>
+          <h1 className='label'>
             AXE THROWING IN THE ARBORETUM OF SOUTH BARRINGTON, IL
-          </Header>
+          </h1>
 
-          <Header size='large' color='grey' textAlign='center'>
+          <h1 className='label'>
            COMING SOON TO THE STREETS OF WOODFIELD!
-          </Header>
+          </h1>
 
           <Divider section hidden />
 
@@ -35,7 +35,7 @@ class Home extends React.Component {
 
           <Grid container columns={2}>
             <Grid.Column>
-              <Header  size='huge' color='grey'>PERFECT NIGHT OUT</Header>
+              <h1  className='fields'>PERFECT NIGHT OUT</h1>
               <p className='text-area'>
               Axe throwing is perfect for corporate events because the activity itself promotes team building as well as team bonding. Bring your group in today and see how your team will flourish. 
               As a result, everyone will leave with a big smile. 
@@ -54,7 +54,7 @@ class Home extends React.Component {
             </Grid.Column>
 
             <Grid.Column>
-              <Header  size='huge' color='grey'>ALL AGES</Header>
+              <h1 className='fields'>ALL AGES</h1>
               <p className='text-area'>
               Whether you are nine or nighty-nine, everyone is welcome. 
               At BullsEye Axe Lounge, we welcome all ages as long as parents/guardians sign waivers for their children. 
@@ -65,7 +65,7 @@ class Home extends React.Component {
 
           <Divider section hidden />
 
-          <Header size='huge' color='grey' textAlign='center'>LOCATION IS EVERYTHING</Header>
+          <h1 className='label'>LOCATION IS EVERYTHING</h1>
 
           <p className='text-center'>
           Located in the action-filled Arboretum of South Barrington.
@@ -94,7 +94,7 @@ class Home extends React.Component {
 
           <Divider section hidden />
 
-          <Header size='huge' color='grey' textAlign='center'>OFFICIAL MEMBER OF THE WORLD AXE LEAGUE</Header><br></br>
+          <h1 className='label'>OFFICIAL MEMBER OF THE WORLD AXE LEAGUE</h1><br></br>
 
           <Grid>
             <Grid.Column href='https://worldaxethrowingleague.com/'>

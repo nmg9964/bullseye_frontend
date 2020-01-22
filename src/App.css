@@ -29,12 +29,12 @@
 }
 
 .text-area {
-  color: grey;
+  color: white;
   font-size: large;
 }
 
 .text-center {
-  color: grey;
+  color: white;
   font-size: large;
   text-align: center;
 }
@@ -46,8 +46,13 @@
   top: 40%;
 }
 
+.label {
+  color: white;
+  text-align: center;
+}
+
 .fields {
-  color: grey;
+  color: white;
 }
 
 .confirm {

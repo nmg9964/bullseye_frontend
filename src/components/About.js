@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Divider, Button, Embed, Image, Header } from 'semantic-ui-react'
+import { Grid, Divider, Button, Image } from 'semantic-ui-react'
 
 class About extends React.Component {
 
@@ -9,7 +9,7 @@ class About extends React.Component {
           
           <Grid container columns={2}>
             <Grid.Column>
-              <Header  size='huge' color='grey'>THIS PLACE IS SPECIAL!</Header>
+              <h1 className='fields'>THIS PLACE IS SPECIAL!</h1>
               <p className='text-area'>
               We have put a great amount of time and energy in making sure our atmosphere and your axe throwing experience is different from other axe throwing locations. 
               We wanted our customers to come in and step into a proper axe throwing lounge. From design to seating and everything in between we are giving the residents of Chicagoland area a relaxing axe throwing lounge to come throw some axes.
@@ -18,7 +18,7 @@ class About extends React.Component {
             </Grid.Column>
 
             <Grid.Column>
-              <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/09/71490994_2289600564686303_1830487754153132032_o-1.jpg' alt='BullsEye Axe Lounge'/>
+              <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/10/ScreenShot20191017at12.27.55AM.png' alt='BullsEye Axe Lounge'/>
             </Grid.Column>
           </Grid>
 
@@ -26,11 +26,11 @@ class About extends React.Component {
 
           <Grid container columns={2}>
             <Grid.Column>
-              <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/09/70136263_2294529064193453_411467311589883904_o.jpg' alt='BullsEye Axe Lounge'/>
+              <Image size='huge' src=' https://www.bullseyeaxelounge.com/wp-content/uploads/2019/09/71490994_2289600564686303_1830487754153132032_o-1.jpg' alt='BullsEye Axe Lounge'/>
             </Grid.Column>
 
             <Grid.Column>
-              <Header  size='huge' color='grey'>OUR MISSION</Header>
+              <h1 className='fields'>OUR MISSION</h1>
               <p className='text-area'>
               For every five customers that walk through our doors we will have a tree planted on their behalf.  
               BullsEye Axe Lounge cares for things that are much greater than profits. 
@@ -38,6 +38,24 @@ class About extends React.Component {
               Let’s all learn the balance of opposites and implement it into our daily lives as nourish our home back to good health.
              </p>
             </Grid.Column>
+          </Grid>
+
+          <Divider section hidden />
+
+          <Grid container columns={3}>
+
+          <Grid.Column>
+            <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/11/IMG_5733.jpg' alt='BullsEye Axe Lounge'/>
+          </Grid.Column>
+
+          <Grid.Column>
+            <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/12/Screen-Shot-2019-12-03-at-11.10.15-AM-copy.jpg' alt='BullsEye Axe Lounge'/>
+          </Grid.Column>
+
+          <Grid.Column>
+            <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2020/01/Screen-Shot-2020-01-03-at-11.56.33-PM-1024x793.png' alt='BullsEye Axe Lounge'/>
+          </Grid.Column>
+
           </Grid>
 
         </div>
