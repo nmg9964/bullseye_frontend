@@ -70,3 +70,9 @@
 .logout-button {
   height: 50%; 
 }
+
+.datepicker {
+  text-align: center;
+  color: #030303;
+  font-size: larger;
+}

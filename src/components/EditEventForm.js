@@ -93,8 +93,8 @@ class EditEventForm extends React.Component {
 
     return(
       <div className='App'>
-        <h3>Select a Date</h3>
-
+        
+        <a className='datepicker'>Select a Date*</a>&nbsp;&nbsp;
         <DatePicker
         selected={this.state.date}
         value={this.state.date}
