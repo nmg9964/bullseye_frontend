@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Divider, Button, Image } from 'semantic-ui-react'
+import { Grid, Divider, Button, List, Image } from 'semantic-ui-react'
 
 class About extends React.Component {
 
@@ -55,6 +55,45 @@ class About extends React.Component {
             <Grid.Column>
               <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2020/01/Screen-Shot-2020-01-03-at-11.56.33-PM-1024x793.png' alt='BullsEye Axe Lounge'/>
             </Grid.Column>
+          </Grid>
+
+          <Divider section hidden />
+
+          <h1 className='label'>WANT TO START AXE THROWING?</h1>
+          <List size='massive'>
+            <h2 className='label'>Every session at the lounge comes with:</h2>
+            <List.Item className='label'>A Host/Instructor</List.Item>
+            <List.Item className='label'>Personal Music Station</List.Item>
+            <List.Item className='label'>Private, Spacious Booth</List.Item>
+          </List>
+
+          <List size='massive'>
+            <h2 className='label'>Standard Pricing per Person</h2>
+            <List.Item className='label'>29.95 (1 Hour)</List.Item>
+            <List.Item className='label'>39.95 (90 min)</List.Item>
+            <List.Item className='label'>49.95 (2 Hrs) </List.Item>
+          </List>
+
+          <List size='massive'>
+            <h2 className='label'>8+ Group Discount Pricing per Person</h2>
+            <List.Item className='label'>24.95 (1 Hour)</List.Item>
+            <List.Item className='label'>34.95 (90 Mins)</List.Item>
+            <List.Item className='label'>44.95 (2 Hours)</List.Item>
+          </List>
+
+          <List size='massive'>
+            <h2 className='label'>Monday - Thursday Discount Pricing per Person</h2>
+            <List.Item className='label'>24.95 (1 Hour)</List.Item>
+            <List.Item className='label'>34.95 (90 Mins)</List.Item>
+            <List.Item className='label'>44.95 (2 Hours)</List.Item>
+          </List>
+
+          <Divider section hidden />
+
+          <Grid  centered columns={1}>
+            <Grid.Row>
+                <Button size='huge' secondary onClick={() => this.props.history.push('/book-session')}>Book Now!</Button>
+            </Grid.Row>
           </Grid>
 
           <Divider section hidden />

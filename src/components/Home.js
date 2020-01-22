@@ -27,7 +27,7 @@ class Home extends React.Component {
             </Grid.Column>
 
             <Grid.Row>
-              <Button  size='massive' secondary onClick={() => this.props.history.push('/book-session')}>Book Now!</Button>
+              <Button size='massive' secondary onClick={() => this.props.history.push('/book-session')}>Book Now!</Button>
             </Grid.Row>
           </Grid>
 

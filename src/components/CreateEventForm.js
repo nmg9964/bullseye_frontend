@@ -64,7 +64,7 @@ class CreateEventForm extends React.Component {
         <Confirmation /> :
 
         <div>
-          <Header size='huge'>Book a Session!</Header>
+          <Header size='huge'>Book an Axe Throwing Session!</Header>
           <Header size='medium'>Select a Date*</Header>
           <DatePicker
           selected={this.state.date}
