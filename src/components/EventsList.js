@@ -2,19 +2,13 @@ import React from 'react'
 import { withRouter } from 'react-router'
 import EventCard from './EventCard'
 
-import { Header, Button, Select, List } from 'semantic-ui-react'
+import { Header, Select, List } from 'semantic-ui-react'
 
 class EventsList extends React.Component {
   state = { selectBookings: 'All' }
 
   handleEventClick = event => {
     this.props.showCard(event)
-  }
-
-  handleLogoutClick = () => {
-    localStorage.removeItem('token')
-    this.props.logout()
-    this.props.history.push('/login')
   }
 
   handleOnChange = (event, { value}) => {
@@ -69,10 +63,6 @@ class EventsList extends React.Component {
           <Header as='h1'>
             Welcome, {this.props.currentAdmin.username}!
           </Header><br></br>
-
-          <Button secondary onClick={this.handleLogoutClick}>
-            Logout
-          </Button>
 
           <Select
           selection

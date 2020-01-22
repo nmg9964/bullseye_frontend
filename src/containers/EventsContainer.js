@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import EventsList from '../components/EventsList'
-import { login, logout } from '../actions/admins'
+import { login } from '../actions/admins'
 import { showCard, hideCard } from '../actions/events'
 
 class EventsContainer extends React.Component {
@@ -37,7 +37,6 @@ class EventsContainer extends React.Component {
         <EventsList 
         currentAdmin={this.props.currentAdmin}
         events={this.props.events}
-        logout={this.props.logout}
         renderEventCard={this.props.renderEventCard}
         showCard={this.props.showCard}
         hideCard={this.props.hideCard}/>
@@ -56,7 +55,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
   login: admin => dispatch(login(admin)),
-  logout: () => dispatch(logout()),
   showCard: event => dispatch(showCard(event)),
   hideCard: () => dispatch(hideCard())
 })

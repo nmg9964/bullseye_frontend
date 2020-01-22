@@ -46,7 +46,7 @@ class Login extends React.Component {
     return(
       <div className='App'>
       <div className='login-form'>
-        <h1>Administrator Login</h1>
+        <h1>Administrator Mode</h1>
         <Form size='large' onSubmit={this.handleOnSubmit}>
           <Form.Field>
             <label>Username</label>
