@@ -1,5 +1,4 @@
 import React from 'react'
-import { withRouter } from 'react-router'
 import EventCard from './EventCard'
 
 import { Header, Select, List } from 'semantic-ui-react'
@@ -86,4 +85,4 @@ class EventsList extends React.Component {
   }
 }
 
-export default withRouter(EventsList)
+export default EventsList
