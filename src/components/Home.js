@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Divider, Button, Image, Header } from 'semantic-ui-react'
+import { Grid, Divider, Button, Image, List } from 'semantic-ui-react'
 
 class Home extends React.Component {
 
@@ -101,6 +101,23 @@ class Home extends React.Component {
                 <Image centered size='medium' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/09/WATLlogowhiteborder.png' alt='World Axe Throwing League'/>
             </Grid.Column>
           </Grid>
+
+          <Divider section hidden />
+
+          <List size='massive'>
+            <h1 className='label'>STANDARD HOURS OF OPERATION</h1>
+            <List.Item className='label'>SUNDAY: 12 PM - 10 PM</List.Item>
+            <List.Item className='label'>MONDAY: 4 PM - 10 PM</List.Item>
+            <List.Item className='label'>TUESDAY: 4 PM - 10 PM</List.Item>
+            <List.Item className='label'>WEDNESDAY: 4 PM - 10 PM</List.Item>
+            <List.Item className='label'>THURSDAY: 4 PM - 10 PM</List.Item>
+            <List.Item className='label'>FRIDAY: 4 PM - 12 AM</List.Item>
+            <List.Item className='label'>SATURDAY: 12 PM - 12 AM</List.Item>
+            <List.Item className='label'>
+              We will open earlier on weekdays upon booking of large groups/parties/corporate events.
+              Call 630-550-8939 or e-mail us at info@bullseyeaxelounge.com for any inquiries.
+            </List.Item>
+          </List>
 
           <Divider section hidden />
 

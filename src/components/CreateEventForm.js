@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { createEvent, showConfirm } from '../actions/events'
 import Confirmation from './Confirmation'
 
-import { Header, Form, Divider } from 'semantic-ui-react'
+import { Header, Form } from 'semantic-ui-react'
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css"
 
