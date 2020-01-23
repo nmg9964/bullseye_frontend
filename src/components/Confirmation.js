@@ -58,9 +58,9 @@ class Confirmation extends React.Component {
   render() {
     const dateObj = this.props.event.date
     const dayOfWeek = dateObj.toLocaleString('en-us', {weekday:'long'})
-    const month = dateObj.getUTCMonth() + 1
-    const day = dateObj.getUTCDate()
-    const year = dateObj.getUTCFullYear()
+    const month = dateObj.getMonth() + 1
+    const day = dateObj.getDate()
+    const year = dateObj.getFullYear()
     const displayDate = `${dayOfWeek} - ${month}/${day}/${year}`
 
     return(

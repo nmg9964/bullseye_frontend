@@ -47,9 +47,9 @@ class EditEventForm extends React.Component {
 
   handleOnSubmit = event => {
     const dateObj = this.state.date
-    const month = dateObj.getUTCMonth() + 1
-    const day = dateObj.getUTCDate()
-    const year = dateObj.getUTCFullYear()
+    const month = dateObj.getMonth() + 1
+    const day = dateObj.getDate()
+    const year = dateObj.getFullYear()
     const submitDate = year + '-' + month + '-' + day
 
     event.preventDefault()
@@ -98,7 +98,8 @@ class EditEventForm extends React.Component {
         <DatePicker
         selected={this.state.date}
         value={this.state.date}
-        onChange={this.handleDateChange}/>
+        onChange={this.handleDateChange}
+        minDate={new Date()}/>
 
       <Form onSubmit={this.handleOnSubmit} className='App-form'>
         <Form.Group widths='equal'/>

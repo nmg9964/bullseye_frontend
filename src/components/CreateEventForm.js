@@ -23,9 +23,9 @@ class CreateEventForm extends React.Component {
 
   handleDateChange = date => {
     this.setState({ date: date })
-    const month = date.getUTCMonth() + 1
-    const day = date.getUTCDate()
-    const year = date.getUTCFullYear()
+    const month = date.getMonth() + 1
+    const day = date.getDate()
+    const year = date.getFullYear()
     const fetchDate = year + '-' + month + '-' + day
 
     fetch(`http://localhost:3001/api/v1/available_times/${fetchDate}`)
@@ -71,7 +71,7 @@ class CreateEventForm extends React.Component {
           selected={this.state.date}
           onChange={this.handleDateChange}
           value={this.state.date} 
-          minDate={this.state.date}/>
+          minDate={new Date()}/>
 
           <Form onSubmit={this.handleOnSubmit} className='App-form'>
           <Form.Group widths='equal'/>
