@@ -22,7 +22,7 @@ class Home extends React.Component {
             <iframe
             className='iframe'
             src="https://www.youtube.com/embed/T_apDtxNZYc?autoplay=1&mute=1&enablejsapi=1"
-            frameborder="0"
+            frameBorder="0"
             ></iframe>
             </Grid.Column>
 
