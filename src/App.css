@@ -76,3 +76,8 @@
   color: #030303;
   font-size: larger;
 }
+
+.image-group {
+  width: 500px;
+  height: 250px;
+}

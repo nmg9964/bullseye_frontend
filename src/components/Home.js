@@ -76,15 +76,15 @@ class Home extends React.Component {
 
           <Grid container columns={3}>
             <Grid.Column>
-              <Image  size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/10/ScreenShot20191017at12.08.31AM.png' alt='BullsEye Axe Lounge'/>
+              <Image className='image-group' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/10/ScreenShot20191017at12.08.31AM.png' alt='BullsEye Axe Lounge'/>
             </Grid.Column>
 
             <Grid.Column>
-              <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/09/1.1.jpg' alt='BullsEye Axe Lounge'/>
+              <Image className='image-group' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/09/1.1.jpg' alt='BullsEye Axe Lounge'/>
             </Grid.Column>
 
             <Grid.Column>
-              <Image size='huge' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/10/ScreenShot20191017at3.06.02PM.png' alt='BullsEye Axe Lounge'/>
+              <Image className='image-group' src='https://www.bullseyeaxelounge.com/wp-content/uploads/2019/10/ScreenShot20191017at3.06.02PM.png' alt='BullsEye Axe Lounge'/>
             </Grid.Column>
 
             <Grid.Row centered>
