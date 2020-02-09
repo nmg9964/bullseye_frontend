@@ -37,7 +37,7 @@ class Navbar extends React.Component {
 
           <Menu.Item><Link
           className='nav-link'
-          to='/'
+          to='/faq'
           exact
           >FAQ</Link>
           </Menu.Item>

@@ -6,6 +6,7 @@ import Login from './components/Login'
 import EventsContainer from './containers/EventsContainer'
 import CreateEventForm from './components/CreateEventForm'
 import About from './components/About'
+import FAQ from './components/FAQ'
 
 import './App.css'
 import 'semantic-ui-css/semantic.min.css'
@@ -20,6 +21,7 @@ function App() {
       <Route exact path='/admin' component={EventsContainer}/>
       <Route exact path='/book-session' component={CreateEventForm}/>
       <Route exact path='/about-us' component={About}/>
+      <Route exact path='/faq' component={FAQ}/>
     </div>
   </BrowserRouter>
   );
