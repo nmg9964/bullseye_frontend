@@ -60,6 +60,17 @@ class FAQ extends React.Component {
           <p style={{fontWeight: 'bold'}}>Are you hiring? When/how do I apply?</p>
           <p>You may submit an application here at any time! With our planned expansion, we will reach out as soon as we need positions filled!</p>
 
+          <p style={{fontWeight: 'bold'}}>Are there any other locations?</p>
+          <p>Bullseye South Barrington – Arboretum is our first location, with Schaumburg – Streets of Woodfield close on it’s heels! Keep an eye on our website and social media for updates! Here is our Instagram, Facebook and LinkedIn.</p>
+
+          <p style={{fontWeight: 'bold'}}>Will you be starting leagues?</p>
+          <p>Yes! As an affiliate of the World Axe Throwing League (WATL), we will be introducing leagues to our location starting in the near future!</p>
+
+          <p style={{fontWeight: 'bold'}}>Can I bring my own axe?</p>
+          <p>Your own axe is allowed, only with the inspection and green light of one of our managers or coaches.</p>
+
+          <p style={{fontWeight: 'bold'}}>Do you allow throwing knives or other weaponry? </p>
+          <p>Currently we can only allow standard throwing axes, but we are looking into ways to accommodate upgraded weaponry, such as knives, stars, javelins and great axes.</p>
         </div>  
 
       </div>
