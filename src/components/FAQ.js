@@ -71,7 +71,11 @@ class FAQ extends React.Component {
 
           <p style={{fontWeight: 'bold'}}>Do you allow throwing knives or other weaponry? </p>
           <p>Currently we can only allow standard throwing axes, but we are looking into ways to accommodate upgraded weaponry, such as knives, stars, javelins and great axes.</p>
-        </div>  
+        </div>
+
+        <Divider section hidden />
+
+        <p className='text-center'>©BullsEye Axe Lounge 2020</p>
 
       </div>
     )}
