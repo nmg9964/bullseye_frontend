@@ -41,6 +41,25 @@ class FAQ extends React.Component {
           <p style={{fontWeight: 'bold'}}>How old do you have to be to throw axes?</p>
           <p>We do not have a specific age limit, but a coach or manager must determine that the willing, young thrower can safely hold, and throw the axe to the target from 10ft.</p>
 
+          <p style={{fontWeight: 'bold'}}>How often do you replace the wood?</p>
+          <p>Depending on how busy we are, some boards need to be replaced after one day! We test all of the boards each day to make sure they’re ready to take your axes!</p>
+
+          <p style={{fontWeight: 'bold'}}>Can the broken/used boards be used for firewood?</p>
+          <p>Absolutely! They are untreated lumber, and make for excellent kindling. Ask us during your session, or through ben@bullseyeaxelounge.com – and the wood is free to anyone who can pick it up themselves!</p>
+
+          <p style={{fontWeight: 'bold'}}>Do you offer gift cards?</p>
+          <p>Yes we do! Please click here!</p>
+
+          <p style={{fontWeight: 'bold'}}>Do you serve alcohol?</p>
+          <p>We do not serve alcohol, and we are not a BYOB facility.</p>
+
+          <p style={{fontWeight: 'bold'}}>What are our dining options? Can we bring our own food?</p>
+          <p>We have partnered with local restaurants Mago Bar and Grill and Georgio’s Pizzeria, which will deliver right to our door.
+          You may bring, or cater your own food as well – just no alcoholic beverages will be allowed.</p>
+
+          <p style={{fontWeight: 'bold'}}>Are you hiring? When/how do I apply?</p>
+          <p>You may submit an application here at any time! With our planned expansion, we will reach out as soon as we need positions filled!</p>
+
         </div>  
 
       </div>
