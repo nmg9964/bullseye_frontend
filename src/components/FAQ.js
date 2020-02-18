@@ -48,7 +48,7 @@ class FAQ extends React.Component {
           <p>Absolutely! They are untreated lumber, and make for excellent kindling. Ask us during your session, or through ben@bullseyeaxelounge.com – and the wood is free to anyone who can pick it up themselves!</p>
 
           <p style={{fontWeight: 'bold'}}>Do you offer gift cards?</p>
-          <p>Yes we do! Please click here!</p>
+          <p>Yes we do! Please click <a href='https://posintigrations.azurewebsites.net/52/GiftCards'>here!</a></p>
 
           <p style={{fontWeight: 'bold'}}>Do you serve alcohol?</p>
           <p>We do not serve alcohol, and we are not a BYOB facility.</p>
@@ -61,7 +61,7 @@ class FAQ extends React.Component {
           <p>You may submit an application here at any time! With our planned expansion, we will reach out as soon as we need positions filled!</p>
 
           <p style={{fontWeight: 'bold'}}>Are there any other locations?</p>
-          <p>Bullseye South Barrington – Arboretum is our first location, with Schaumburg – Streets of Woodfield close on it’s heels! Keep an eye on our website and social media for updates! Here is our Instagram, Facebook and LinkedIn.</p>
+          <p>Bullseye South Barrington – Arboretum is our first location, with Schaumburg – Streets of Woodfield close on it’s heels! Keep an eye on our website and social media for updates! See our <a href='https://www.instagram.com/axelounge/'>Instagram</a>, <a href='https://www.facebook.com/bullseyeaxelounge/'>Facebook</a> and <a href='https://www.linkedin.com/company/bullseye-axe-lounge'>LinkedIn</a>.</p>
 
           <p style={{fontWeight: 'bold'}}>Will you be starting leagues?</p>
           <p>Yes! As an affiliate of the World Axe Throwing League (WATL), we will be introducing leagues to our location starting in the near future!</p>
