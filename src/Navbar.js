@@ -49,13 +49,6 @@ class Navbar extends React.Component {
           >Blog</Link>
           </Menu.Item>
 
-          <Menu.Item
-          className='nav-link'
-          href='https://posintigrations.azurewebsites.net/52/GiftCards'
-          target='_blank'
-          >Gift Cards
-          </Menu.Item>
-
           <Menu.Item>
           <Link
           className='nav-link'
@@ -70,6 +63,13 @@ class Navbar extends React.Component {
           to='/'
           exact
           >Contact Us</Link>
+          </Menu.Item>
+
+          <Menu.Item
+          className='nav-link'
+          href='https://posintigrations.azurewebsites.net/52/GiftCards'
+          target='_blank'
+          >Gift Cards
           </Menu.Item>
 
           {this.props.currentAdmin.id ?
