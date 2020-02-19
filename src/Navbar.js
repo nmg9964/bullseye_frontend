@@ -4,7 +4,7 @@ import { logout } from './actions/admins'
 import { withRouter } from 'react-router'
 
 import { Link } from 'react-router-dom';
-import { Menu, Image, Button } from 'semantic-ui-react'
+import { Menu, Image, Button, Icon } from 'semantic-ui-react'
 
 class Navbar extends React.Component {
 
@@ -49,12 +49,11 @@ class Navbar extends React.Component {
           >Blog</Link>
           </Menu.Item>
 
-          <Menu.Item>
-          <Link
+          <Menu.Item
           className='nav-link'
-          to='/'
-          exact
-          >Gift Cards</Link>
+          href='https://posintigrations.azurewebsites.net/52/GiftCards'
+          target='_blank'
+          >Gift Cards
           </Menu.Item>
 
           <Menu.Item>
