@@ -60,7 +60,7 @@ class Navbar extends React.Component {
           <Menu.Item>
           <Link
           className='nav-link'
-          to='/'
+          to='/contact-us'
           exact
           >Contact Us</Link>
           </Menu.Item>
