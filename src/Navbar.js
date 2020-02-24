@@ -44,7 +44,7 @@ class Navbar extends React.Component {
 
           <Menu.Item><Link
           className='nav-link'
-          to='/'
+          to='/blog'
           exact
           >Blog</Link>
           </Menu.Item>
