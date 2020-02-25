@@ -52,7 +52,7 @@ class Navbar extends React.Component {
           <Menu.Item>
           <Link
           className='nav-link'
-          to='/'
+          to='/careers'
           exact
           >Careers</Link>
           </Menu.Item>

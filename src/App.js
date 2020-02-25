@@ -8,6 +8,7 @@ import CreateEventForm from './components/CreateEventForm'
 import About from './components/About'
 import FAQ from './components/FAQ'
 import Blog from './components/Blog'
+import Careers from './components/Careers'
 import Contact from './components/Contact'
 
 import './App.css'
@@ -25,6 +26,7 @@ function App() {
       <Route exact path='/about-us' component={About}/>
       <Route exact path='/faq' component={FAQ}/>
       <Route exact path='/blog' component={Blog}/>
+      <Route exact path='/careers' component={Careers}/>
       <Route exact path='/contact-us' component={Contact}/>
     </div>
   </BrowserRouter>
