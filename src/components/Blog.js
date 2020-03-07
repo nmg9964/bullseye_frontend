@@ -1,10 +1,15 @@
 import React from 'react'
-import { Grid, Divider } from 'semantic-ui-react'
+import { Grid, Image, Divider } from 'semantic-ui-react'
 
 class Blog extends React.Component {
   render() {
     return <div className='App-home'>
       <Grid container columns={2}>
+
+        <Grid.Column>
+            <Image size='massive' src='https://www.enjoyillinois.com/assets/Tourism-Operators/images/Cypress-woodfield8.1.12-1711AMCGameworkssmall.jpg' alt='Streets of Woodfield'/>
+        </Grid.Column>
+
         <Grid.Column>
           <h1 className='fields'>WE ARE EXCITED TO ANNOUNCE OUR SECOND LOCATION!</h1>
           <p className='text-area'>The streets of Woodfield has been one of your favorite spots in the Chicagoland area for decades and we are elated to become part of that community of establishments!</p>
@@ -19,6 +24,10 @@ class Blog extends React.Component {
           <p className='text-area'>Coming early 2020 to the Streets of Woodfield, see you soon Schaumburg!</p>
         </Grid.Column>
       </Grid>
+
+      <Divider section hidden />
+
+      <p className='text-center'>©BullsEye Axe Lounge 2020</p>
     </div>
   }
 }
