@@ -27,8 +27,7 @@ class Home extends React.Component {
             </Grid.Column>
 
             <Grid.Row>
-              <Button size='massive' secondary onClick={() => this.props.history.push('/book-session')}>Book Now!</Button><br></br>
-              <Button size='massive' href='https://docs.google.com/forms/d/e/1FAIpQLSe6NkkLRpRylAn7ySuxqXqeTdcArUqwMEj6wSLGicUnYPO-Lw/viewform'>Sign up for Speed Dating!</Button>
+              <Button size='massive' secondary onClick={() => this.props.history.push('/book-session')}>Book Now!</Button>
             </Grid.Row>
           </Grid>
 
