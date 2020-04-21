@@ -4,7 +4,7 @@ import { logout } from './actions/admins'
 import { withRouter } from 'react-router'
 
 import { Link } from 'react-router-dom';
-import { Menu, Image, Button, Icon } from 'semantic-ui-react'
+import { Menu, Image, Button } from 'semantic-ui-react'
 
 class Navbar extends React.Component {
 
