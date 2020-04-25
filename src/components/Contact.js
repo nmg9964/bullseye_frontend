@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Divider, Embed } from 'semantic-ui-react'
+import { Grid, Divider } from 'semantic-ui-react'
 
 class Contact extends React.Component {
   render() {
