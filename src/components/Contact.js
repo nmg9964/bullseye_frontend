@@ -36,8 +36,10 @@ class Contact extends React.Component {
         </Grid>
 
         <Divider section hidden />
+
+        <p className='text-center'>©BullsEye Axe Lounge 2020</p>
         
-    </div>)
+      </div>)
   }
 }
 
